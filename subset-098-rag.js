@@ -49,7 +49,7 @@
     return clause.split('.').slice(0, -1).join('.');
   }
 
-  function retrieve(question, limit = 16) {
+  function retrieve(question, limit = 22) {
     const expandedTokens = queryTokens(question);
     const ranked = index.chunks
       .map(chunk => ({chunk, score: scoreChunk(chunk, expandedTokens, question)}))
@@ -57,6 +57,16 @@
       .sort((a, b) => b.score - a.score)
     const seeds = ranked.slice(0, 6);
     const selected = new Map(seeds.map(item => [item.chunk.id, {...item, context: false}]));
+    const asksSaiHeader = expandedTokens.includes('sai') && expandedTokens.includes('header');
+    if (asksSaiHeader) {
+      const definitionClauses = index.chunks.filter(chunk =>
+        /^5\.4\.4\.1\.(?:[2-9]|1[0-3])$/.test(chunk.clause || '') ||
+        ['5.4.5.3.4', '5.4.5.3.5', '5.4.9.3.10'].includes(chunk.clause)
+      );
+      for (const chunk of definitionClauses) {
+        selected.set(chunk.id, {chunk, score: 14, context: true, contextLabel: 'definition context'});
+      }
+    }
     for (const seed of seeds.slice(0, 3)) {
       const position = index.chunks.findIndex(chunk => chunk.id === seed.chunk.id);
       const parent = clauseParent(seed.chunk.clause);
@@ -72,8 +82,8 @@
   }
 
   function buildPrompt(question, results) {
-    const evidence = results.map(({chunk, context}, i) => [
-      `[Evidence ${i + 1}${context ? ' - adjacent context' : ''}]`,
+    const evidence = results.map(({chunk, context, contextLabel}, i) => [
+      `[Evidence ${i + 1}${context ? ` - ${contextLabel || 'adjacent context'}` : ''}]`,
       `Document: SUBSET-098 v${index.version}`,
       `Clause: ${chunk.clause || 'unlabelled'}`,
       `PDF page: ${chunk.page}`,
@@ -87,9 +97,9 @@
       els.results.innerHTML = '<p class="rag-empty">No matching evidence found. Try exact technical terms or a clause number.</p>';
       return;
     }
-    els.results.innerHTML = results.map(({chunk, score, context}) => `
+    els.results.innerHTML = results.map(({chunk, score, context, contextLabel}) => `
       <article class="rag-result">
-        <header><h3>${escapeHtml(chunk.clause ? `Clause ${chunk.clause}` : `Page ${chunk.page}`)}${chunk.title ? ` - ${escapeHtml(chunk.title)}` : ''}</h3><span class="rag-score">${context ? 'adjacent context' : `score ${score.toFixed(2)}`}</span></header>
+        <header><h3>${escapeHtml(chunk.clause ? `Clause ${chunk.clause}` : `Page ${chunk.page}`)}${chunk.title ? ` - ${escapeHtml(chunk.title)}` : ''}</h3><span class="rag-score">${context ? (contextLabel || 'adjacent context') : `score ${score.toFixed(2)}`}</span></header>
         <p>${escapeHtml(chunk.text)}</p>
         <div class="rag-source">SUBSET-098 v${escapeHtml(index.version)} · PDF page ${chunk.page}</div>
       </article>`).join('');
