@@ -13,6 +13,12 @@ const requirements = [
   ['091-4.4.6','091','Diagnostic information should support post-event safety analysis.','Optional']
 ].map(([id,subset,text,status])=>({id,subset,text,status,selected:false}));
 
+const documentList=document.querySelector('#documentList'), documentSearch=document.querySelector('#documentSearch'), documentCount=document.querySelector('#documentCount');
+let eraDocuments=[];
+function renderDocuments(){const q=documentSearch.value.trim().toLowerCase();const rows=eraDocuments.filter(d=>`${d.index} ${d.reference} ${d.title} ${d.version} ${d.type}`.toLowerCase().includes(q));documentCount.textContent=`${rows.length} ${rows.length===1?'file':'files'}`;documentList.innerHTML=rows.map(d=>`<a class="doc-row" href="${d.url}" target="_blank" rel="noopener"><span class="doc-index">${d.index}</span><span class="doc-ref">${d.reference}</span><span class="doc-title">${d.title}</span><span class="doc-version">${d.version}</span><span class="doc-type">${d.type} ↗</span></a>`).join('')||'<div class="empty-docs">No documents match your search.</div>'}
+fetch('era-documents.json').then(response=>response.json()).then(data=>{eraDocuments=data;renderDocuments()}).catch(()=>{documentList.innerHTML='<div class="empty-docs">The archive catalogue could not be loaded.</div>'});
+documentSearch.addEventListener('input',renderDocuments);
+
 const list=document.querySelector('#requirementList'), search=document.querySelector('#searchInput'), count=document.querySelector('#visibleCount'), empty=document.querySelector('#emptyState'), selectAll=document.querySelector('#selectAll');
 const checkedValues=name=>[...document.querySelectorAll(`input[name="${name}"]:checked`)].map(x=>x.value);
 function visible(){const q=search.value.trim().toLowerCase(), subsets=checkedValues('subset'), statuses=checkedValues('status');return requirements.filter(r=>subsets.includes(r.subset)&&statuses.includes(r.status)&&(`${r.id} ${r.text}`).toLowerCase().includes(q))}

@@ -10,7 +10,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#" aria-label="UNISIG Subset home"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a>
-    <nav aria-label="Primary navigation"><a href="#explorer">Explorer</a><a href="#about">About</a><a class="github" href="https://github.com/zxj088/subset">GitHub ↗</a></nav>
+    <nav aria-label="Primary navigation"><a href="#documents">Documents</a><a href="#explorer">Explorer</a><a href="#about">About</a><a class="github" href="https://github.com/zxj088/subset">GitHub ↗</a></nav>
   </header>
 
   <main>
@@ -19,11 +19,19 @@
       <h1>Find the requirements<br>that matter.</h1>
       <p>Explore, filter, and export a focused subset of UNISIG requirements for your system, review, or compliance baseline.</p>
       <div class="hero-actions"><a class="primary" href="#explorer">Open explorer <span>↓</span></a><a class="text-link" href="#about">How it works →</a></div>
-      <div class="metrics"><div><strong id="totalMetric">12</strong><span>sample requirements</span></div><div><strong>4</strong><span>UNISIG subsets</span></div><div><strong>3</strong><span>requirement statuses</span></div></div>
+      <div class="metrics"><div><strong>79</strong><span>archived documents</span></div><div><strong>12</strong><span>sample requirements</span></div><div><strong>1</strong><span>authoritative source</span></div></div>
+    </section>
+
+    <section class="documents" id="documents">
+      <div class="section-head"><div><span class="section-no">01</span><h2>Document archive</h2></div><a class="source-link" href="https://www.era.europa.eu/era-folder/archived-set-specifications-3-etcs-b3-r2-gsm-r-b1">View ERA source ↗</a></div>
+      <p class="archive-intro">Complete Set of Specifications 3 — ETCS Baseline 3 Release 2 and GSM-R Baseline 1. Downloads open the authoritative files hosted by the European Union Agency for Railways.</p>
+      <label class="doc-search"><span>⌕</span><input id="documentSearch" type="search" placeholder="Search reference, title, version…" aria-label="Search documents"><b id="documentCount">79 files</b></label>
+      <div class="doc-header"><span>Index</span><span>Reference</span><span>Document</span><span>Version</span><span>Format</span></div>
+      <div id="documentList" class="document-list" aria-live="polite"></div>
     </section>
 
     <section class="explorer" id="explorer">
-      <div class="section-head"><div><span class="section-no">01</span><h2>Subset explorer</h2></div><button id="exportBtn" class="export">Export selection <span>↗</span></button></div>
+      <div class="section-head"><div><span class="section-no">02</span><h2>Subset explorer</h2></div><button id="exportBtn" class="export">Export selection <span>↗</span></button></div>
       <div class="workspace">
         <aside class="filters">
           <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search ID or requirement…" aria-label="Search requirements"></label>
@@ -40,7 +48,7 @@
     </section>
 
     <section class="about" id="about">
-      <span class="section-no">02</span><div><h2>From specification<br>to working set.</h2><p>UNISIG Subset Explorer is a lightweight workspace for railway engineers and assurance teams. Narrow large specifications to a reviewable baseline, then export the selection for analysis and collaboration.</p></div>
+      <span class="section-no">03</span><div><h2>From specification<br>to working set.</h2><p>UNISIG Subset Explorer is a lightweight workspace for railway engineers and assurance teams. Narrow large specifications to a reviewable baseline, then export the selection for analysis and collaboration.</p></div>
       <ol><li><span>01</span><div><b>Filter</b><p>Choose subsets and statuses relevant to your scope.</p></div></li><li><span>02</span><div><b>Select</b><p>Build a focused working set of requirements.</p></div></li><li><span>03</span><div><b>Export</b><p>Download a clean CSV for your engineering workflow.</p></div></li></ol>
     </section>
   </main>

@@ -1,0 +1,713 @@
+[
+  {
+    "index": "Index",
+    "reference": "Reference",
+    "title": "readme_file_-_set_3_-_archived_specs.docx",
+    "version": "Approved",
+    "note": "Note",
+    "type": "DOCX",
+    "url": "https://www.era.europa.eu/system/files/2023-09/sos3_readme_file_-_set_3_-_archived_specs.docx"
+  },
+  {
+    "index": "03",
+    "reference": "SUBSET-023",
+    "title": "Glossary of Terms and Abbreviations",
+    "version": "3.3.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index003_-_subset-023_v330.pdf"
+  },
+  {
+    "index": "04",
+    "reference": "SUBSET-026",
+    "title": "System Requirement Specification",
+    "version": "3.6.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index004_-_subset-026_v360.zip"
+  },
+  {
+    "index": "05",
+    "reference": "SUBSET-027",
+    "title": "FIS Juridical Recording",
+    "version": "3.3.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index005_-_subset-027_v330.pdf"
+  },
+  {
+    "index": "06",
+    "reference": "ERA_ERTMS_015560",
+    "title": "ETCS Driver Machine Interface",
+    "version": "3.6.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index006_-_era_ertms_015560_v360.zip"
+  },
+  {
+    "index": "07",
+    "reference": "SUBSET-034",
+    "title": "Train Interface FIS",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index007_-_subset-034_v320.pdf"
+  },
+  {
+    "index": "08",
+    "reference": "SUBSET-035",
+    "title": "Specific Transmission Module FFFIS",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index008_-_subset-035_v320.pdf"
+  },
+  {
+    "index": "09",
+    "reference": "SUBSET-036",
+    "title": "FFFIS for Eurobalise",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index009_-_subset-036_v310.pdf"
+  },
+  {
+    "index": "10",
+    "reference": "SUBSET-037",
+    "title": "Euroradio FIS",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index010_-_subset-037_v320.pdf"
+  },
+  {
+    "index": "11",
+    "reference": "SUBSET-038",
+    "title": "Offline Key management FIS",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index011_-_subset-038_v310.pdf"
+  },
+  {
+    "index": "12",
+    "reference": "SUBSET-039",
+    "title": "FIS for RBC/RBC handover",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index012_-_subset-039_v320.pdf"
+  },
+  {
+    "index": "13",
+    "reference": "SUBSET-040",
+    "title": "Dimensioning and Engineering rules",
+    "version": "3.4.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index013_-_subset-040_v340.pdf"
+  },
+  {
+    "index": "14",
+    "reference": "SUBSET-041",
+    "title": "Performance Requirements for Interoperability",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index014_-_subset-041_v320.pdf"
+  },
+  {
+    "index": "16",
+    "reference": "SUBSET-044",
+    "title": "FFFIS for Euroloop",
+    "version": "2.4.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index016_-_subset-044_v240.pdf"
+  },
+  {
+    "index": "19",
+    "reference": "SUBSET-047",
+    "title": "Trackside-Trainborne FIS for Radio infill",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index019_-_subset-047_v300.pdf"
+  },
+  {
+    "index": "20",
+    "reference": "SUBSET-048",
+    "title": "Trainborne FFFIS for Radio infill",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index020_-_subset-048_v300.pdf"
+  },
+  {
+    "index": "23",
+    "reference": "SUBSET-054",
+    "title": "Responsibilities and rules for the assignment of values to ETCS variables",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index023_-_subset-054_v300.pdf"
+  },
+  {
+    "index": "25",
+    "reference": "SUBSET-056",
+    "title": "STM FFFIS Safe time layer",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index025_-_subset-056_v300.pdf"
+  },
+  {
+    "index": "26",
+    "reference": "SUBSET-057",
+    "title": "STM FFFIS Safe link layer",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index026_-_subset-057_v310.pdf"
+  },
+  {
+    "index": "27",
+    "reference": "SUBSET-091",
+    "title": "Safety Requirements for the Technical Interoperability of ETCS in Levesl 1 and 2",
+    "version": "3.6.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index027_-_subset-091_v360.pdf"
+  },
+  {
+    "index": "29",
+    "reference": "SUBSET-102",
+    "title": "Test specification for interface \"K\"",
+    "version": "2.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index029_-_subset-102_v200.pdf"
+  },
+  {
+    "index": "31",
+    "reference": "SUBSET-094",
+    "title": "Functional requirements for an onboard reference test facilitiy",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index031_-_subset-094_v310_era-opi-2017-5.zip"
+  },
+  {
+    "index": "32",
+    "reference": "EIRENE FRS",
+    "title": "GSM-R Functional Requirements Specification",
+    "version": "8.0.0",
+    "note": "Note 10",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index032_-_eirene_frs_v800.pdf"
+  },
+  {
+    "index": "33",
+    "reference": "EIRENE SRS",
+    "title": "GSM-R System Requirements Specification",
+    "version": "16.0.0",
+    "note": "Note 10",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index033_-_eirene_srs_v1600.pdf"
+  },
+  {
+    "index": "34",
+    "reference": "A11T6001",
+    "title": "(MORANE) Radio Transmission FFFIS for EuroRadio",
+    "version": "13.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index034_-a11t6001_v1300.pdf"
+  },
+  {
+    "index": "36 c",
+    "reference": "SUBSET-074-2",
+    "title": "FFFIS STM Test cases document",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index036c_-_subset-074-2_v310.zip"
+  },
+  {
+    "index": "37 b",
+    "reference": "SUBSET-076-5-2",
+    "title": "Test cases related to features",
+    "version": "3.3.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037b_-_subset-076-5-2_v330_era-opi-2017-5.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 1)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_1_out_of_6.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 2)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_2_out_of_6.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 3)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_3_out_of_6.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 4)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_4_out_of_6.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 5)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_5_out_of_6_0.zip"
+  },
+  {
+    "index": "37 c",
+    "reference": "SUBSET-076-6-3 (part 6)",
+    "title": "Test sequences",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_6_out_of_6.zip"
+  },
+  {
+    "index": "37 d",
+    "reference": "SUBSET-076-7",
+    "title": "Scope of the test specifications",
+    "version": "3.3.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037d_-_subset-076-7_v330_era-opi-2017-5.zip"
+  },
+  {
+    "index": "38",
+    "reference": "06E068",
+    "title": "ETCS marker-board definition",
+    "version": "2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index038_-_06e068_v20.pdf"
+  },
+  {
+    "index": "39",
+    "reference": "SUBSET-092-1",
+    "title": "ERTMS EuroRadio Conformance Requirements",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index039_-_subset-092-1_v310.pdf"
+  },
+  {
+    "index": "40",
+    "reference": "SUBSET-092-2",
+    "title": "ERTMS EuroRadio test cases safety layer",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index040_-_subset-092-2_v310.pdf"
+  },
+  {
+    "index": "43",
+    "reference": "SUBSET-085",
+    "title": "Test Specification for Eurobalise FFFIS",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index043_-_subset-085_v300.pdf"
+  },
+  {
+    "index": "45",
+    "reference": "SUBSET-101",
+    "title": "Interface \"K\" Specification",
+    "version": "2.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index045_-_subset-101_v200.pdf"
+  },
+  {
+    "index": "46",
+    "reference": "SUBSET-100",
+    "title": "Interface \"G\" Specification",
+    "version": "2.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index046_-_subset-100_v200.pdf"
+  },
+  {
+    "index": "48",
+    "reference": "Reserved",
+    "title": "Test specification for mobile equipment GSM-R",
+    "version": "-",
+    "note": "Note 4",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index48_reserved_document.pdf"
+  },
+  {
+    "index": "49",
+    "reference": "SUBSET-059",
+    "title": "Performance requirements for STM",
+    "version": "3.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index049_-_subset-059_v310.pdf"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103",
+    "title": "Test specification for Euroloop",
+    "version": "1.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index050_-_subset-103_v110.pdf"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 1)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%201%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 2)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%202%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 3)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%203%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 4)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%204%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 5)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%205%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 6)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%206%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 OnBoard TSOE (part 7)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%207%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 1)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%201%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 2)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%202%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 3)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%203%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 4)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%204%29_1.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 5)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%205%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 6)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%206%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSOE (Part 7)",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%207%29_0.zip"
+  },
+  {
+    "index": "050",
+    "reference": "SUBSET-103 TSTE",
+    "title": "Test specification for Euroloop",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "ZIP",
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSTE_0.zip"
+  },
+  {
+    "index": "52",
+    "reference": "SUBSET-058",
+    "title": "FFFIS STM Application Layer",
+    "version": "3.2.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index052_-_subset-058_v320.pdf"
+  },
+  {
+    "index": "60",
+    "reference": "SUBSET-104",
+    "title": "ETCS System Version Management",
+    "version": "3.3.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index060_-_subset-104_v330.pdf"
+  },
+  {
+    "index": "63",
+    "reference": "SUBSET-098",
+    "title": "RBC-RBC Safe Communication Interface",
+    "version": "3.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf"
+  },
+  {
+    "index": "64",
+    "reference": "EN 301 515",
+    "title": "Global System for Mobile Communication; Requirements for GSM operation on railways",
+    "version": "2.3.0",
+    "note": "Note 2",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index064_-_en_301515_v230.pdf"
+  },
+  {
+    "index": "65",
+    "reference": "TS 102 281",
+    "title": "Detailed requirements for GSM operation on railways",
+    "version": "3.0.0",
+    "note": "Note 3",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index065_-_ts102281_v300.pdf"
+  },
+  {
+    "index": "66",
+    "reference": "TS 103 169",
+    "title": "ASCI Options for Interoperability",
+    "version": "1.1.1",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index066_-_ts103169_v111.pdf"
+  },
+  {
+    "index": "67",
+    "reference": "(MORANE) P 38 T 9001",
+    "title": "FFFIS for GSM-R SIM Cards",
+    "version": "5.0",
+    "note": "Note 10",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index067_-_morane_p38t9001_v50.pdf"
+  },
+  {
+    "index": "68",
+    "reference": "ETSI TS 102 610",
+    "title": "Railway Telecommunication; GSM; Usage of the UUIE for GSM operation on railways",
+    "version": "1.3.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index068_-_ts102610_v130.pdf"
+  },
+  {
+    "index": "69",
+    "reference": "(MORANE) F 10 T 6002",
+    "title": "FFFS for Confirmation of High Priority Calls",
+    "version": "5.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index069_-_morane_f10t6002_v50.pdf"
+  },
+  {
+    "index": "70",
+    "reference": "(MORANE) F 12 T 6002",
+    "title": "FIS for Confirmation of High Priority Calls",
+    "version": "5.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index070_-_morane_f12t6002_v50.pdf"
+  },
+  {
+    "index": "71",
+    "reference": "(MORANE) E 10 T 6001",
+    "title": "FFFS for Functional Addressing",
+    "version": "4.1",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index071_-_morane_e10t6001_v41.pdf"
+  },
+  {
+    "index": "72",
+    "reference": "(MORANE) E 12 T 6001",
+    "title": "FIS for Functional Addressing",
+    "version": "5.1",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index072_-_morane_e12t6001_v51.pdf"
+  },
+  {
+    "index": "73",
+    "reference": "(MORANE) F 10 T 6001",
+    "title": "FFFS for Location Dependent Addressing",
+    "version": "4",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index073_-_morane_f10t6001_v4.pdf"
+  },
+  {
+    "index": "74",
+    "reference": "(MORANE) F 12 T 6001",
+    "title": "FIS for Location Dependent Addressing",
+    "version": "3",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index074_-_morane_f12t6001_v3.pdf"
+  },
+  {
+    "index": "75",
+    "reference": "(MORANE) F 10 T 6003",
+    "title": "FFFS for Presentation of Functional Numbers to Called and Calling Parties",
+    "version": "4",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index075_-_morane_f10t6003_v4.pdf"
+  },
+  {
+    "index": "76",
+    "reference": "(MORANE) F 12 T 6003",
+    "title": "FIS for Presentation of Functional Numbers to Called and Calling Parties",
+    "version": "4",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index076_-_morane_f12t6003_v4.pdf"
+  },
+  {
+    "index": "77",
+    "reference": "ERA/ERTMS/033281",
+    "title": "Interfaces between CCS track-side and other subsystems",
+    "version": "4.0",
+    "note": "Note 7",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index077_-_era_ertms_033281_v40.pdf"
+  },
+  {
+    "index": "79",
+    "reference": "SUBSET-114",
+    "title": "KMC-ETCS Entity Off-line KM FIS",
+    "version": "1.1.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index079_-_subset-114_v110.pdf"
+  },
+  {
+    "index": "81",
+    "reference": "Reserved",
+    "title": "Train Interface FFFIS",
+    "version": "-",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index81_reserved_document.pdf"
+  },
+  {
+    "index": "82",
+    "reference": "Reserved",
+    "title": "FFFIS TI – Safety Analysis",
+    "version": "-",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index82_reserved_document.pdf"
+  },
+  {
+    "index": "83",
+    "reference": "SUBSET-137",
+    "title": "On-line Key Management FFFIS",
+    "version": "1.0.0",
+    "note": "-",
+    "type": "PDF",
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index083_-_subset-137_v100.pdf"
+  }
+]
