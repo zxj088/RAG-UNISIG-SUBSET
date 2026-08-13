@@ -27,6 +27,14 @@ The repository includes a local-only clause retrieval prototype for SUBSET-098 v
 4. Load `local-data\subset-098-v300-index.json`, enter a question, and retrieve evidence.
 5. Copy the generated grounded prompt into an approved Microsoft Copilot Chat session.
 
+Run the local retrieval regression suite after rebuilding the index or changing ranking logic:
+
+```powershell
+node tests\subset-098-retrieval.test.js
+```
+
+The suite verifies required clauses and pages for ten representative questions, including SAI header structure, network definitions, connection establishment, key management, and error handling.
+
 The prototype is a retrieval aid, not an engineering authority. Verify all results against the official ERA document.
 
 > The included records are illustrative sample data and are not an authoritative UNISIG specification source.
