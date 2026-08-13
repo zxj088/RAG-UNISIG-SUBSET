@@ -1,0 +1,268 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUBSET-098 v3.0.0 evidence — PDF pages 86–95</title><meta name="robots" content="index,follow,max-snippet:-1"><link rel="stylesheet" href="styles.css">
+<style>.corpus-shell{max-width:980px;margin:0 auto;padding:48px 24px 80px}.corpus-warning{border-left:4px solid #d38b00;padding:14px 16px;background:#fff7df}.corpus-links{display:grid;gap:10px;margin:28px 0}.evidence-chunk{padding:22px 0;border-top:1px solid #dfe5e8}.evidence-chunk h2{font-size:1.15rem;margin:0 0 8px}.evidence-chunk p{line-height:1.65}.citation{color:#52666d}</style></head>
+<body><header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a><nav><a href="subset-098-corpus.html">Evidence hub</a></nav></header>
+<main class="corpus-shell"><div class="eyebrow"><span></span> Machine-readable evidence</div><h1>SUBSET-098 v3.0.0 evidence — PDF pages 86–95</h1><p>Directly readable evidence blocks extracted from PDF pages 86 through 95.</p>
+<p class="corpus-warning"><strong>Verification notice:</strong> Automatically extracted search evidence. Verify engineering decisions against the <a href="https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf">official ERA-hosted PDF</a>.</p>
+<section aria-label="Extracted clause evidence"><article id="ss098-6-5-4-4-2-p86-460" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.4.2" data-pdf-page="86">
+<h2>Clause 6.5.4.4.2 — The DI ALEPKT (Disconnect Indication) has the following format:</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.4.2, PDF p.86</p>
+<p>6.5.4.4.2 The DI ALEPKT (Disconnect Indication) has the following format: DI ALEPKT – Initiator to Responder (Packet Type 4) ALEPKT ALEPKT User Data Header Header fields 10 octets DI SaPDU</p></article><article id="ss098-6-5-4-4-3-p86-461" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.4.3" data-pdf-page="86">
+<h2>Clause 6.5.4.4.3 — The flow of ALEPKT packets between the two Adaptation Layer entities and the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.4.3, PDF p.86</p>
+<p>6.5.4.4.3 The flow of ALEPKT packets between the two Adaptation Layer entities and the respective TS-User in consequence of some failure in the communication system (disruptive disconnect) is as follows: Figure 35: Disruptive Connection release detailed protocol sequence</p></article><article id="ss098-6-5-4-5-1-p87-462" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.1" data-pdf-page="87">
+<h2>Clause 6.5.4.5.1 — Note: The descriptions in this section are for information only. Other implementations</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.1, PDF p.87</p>
+<p>6.5.4.5.1 Note: The descriptions in this section are for information only. Other implementations which use different primitives are possible, provided that there is no impact on interworking.</p></article><article id="ss098-6-5-4-5-2-p87-463" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.2" data-pdf-page="87">
+<h2>Clause 6.5.4.5.2 — The ISO connection release service is similar to the TCP connection abort service</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.2, PDF p.87</p>
+<p>6.5.4.5.2 The ISO connection release service is similar to the TCP connection abort service (TCP_CLOSE). However, unlike TCP, ISO does not support an orderly connection release. The transport provider does not guarantee delivery of any user data once the release phase is entered. This TCP form of release guarantees that any buffered data is delivered to the transport user before the connection is released. ISO merely guarantees that buffered data is delivered to the destination transport provider.</p></article><article id="ss098-6-5-4-5-3-p87-464" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.3" data-pdf-page="87">
+<h2>Clause 6.5.4.5.3 — The TCP orderly release service is sometimes referred to as a “graceful closure”. Each</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.3, PDF p.87</p>
+<p>6.5.4.5.3 The TCP orderly release service is sometimes referred to as a “graceful closure”. Each transport user must agree to release the connection before the connection is dissolved, and until then, the TCP transport provider maintains the connection. Once a connection has been released by a transport user, no more data can be sent, but the user can continue to receive data. Any data previously sent is delivered to the destination transport user.</p></article><article id="ss098-6-5-4-5-4-p87-465" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.4" data-pdf-page="87">
+<h2>Clause 6.5.4.5.4 — ISO-connection release service, provided by Adaptation Layer, shall cause all (one or</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.4, PDF p.87</p>
+<p>6.5.4.5.4 ISO-connection release service, provided by Adaptation Layer, shall cause all (one or more) associated TCP connections to be released.</p></article><article id="ss098-6-5-4-5-5-p87-466" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.5" data-pdf-page="87">
+<h2>Clause 6.5.4.5.5 — The relative sequence of actions/events between the levels ISO TP2 and TCP is the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.5, PDF p.87</p>
+<p>6.5.4.5.5 The relative sequence of actions/events between the levels ISO TP2 and TCP is the following: ISO TCP Data TCP ISO T- DISCONNECT.REQUEST TCP_SEND_DAT DI ALEPKT A (wait) TCP_ Data_Ready TCP_ Read_Data TCP_Close (ALEPKT check) TCP_Close TCP_Closed TCP_Closed T-Disconnect.Indication</p></article><article id="ss098-6-5-4-5-6-p87-467" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.6" data-pdf-page="87">
+<h2>Clause 6.5.4.5.6 — The remote TCP entity indicates to the Adaptation Layer entity that a connection has</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.6, PDF p.87</p>
+<p>6.5.4.5.6 The remote TCP entity indicates to the Adaptation Layer entity that a connection has been closed through a TCP_CLOSED event. If the TCP connection has failed or has been rejected, the TCP indicates that the connection has been closed through a TCP_CONNECT_FAILS event.</p></article><article id="ss098-6-5-4-5-7-p87-468" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.5.7" data-pdf-page="87">
+<h2>Clause 6.5.4.5.7 — If the Adaptation Layer believes that a link is unusable for any other reason, then it</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.5.7, PDF p.87</p>
+<p>6.5.4.5.7 If the Adaptation Layer believes that a link is unusable for any other reason, then it shall remove the link using the primitive TCP_ABORT so issuing the TCP_ERRORED event to the other side of the connection.</p></article><article id="ss098-6-5-4-6-p88-469" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.6" data-pdf-page="88">
+<h2>Clause 6.5.4.6 — Normal disconnection at the request of the TS-User</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.6, PDF p.88</p>
+<p>6.5.4.6 Normal disconnection at the request of the TS-User</p></article><article id="ss098-6-5-4-6-1-p88-470" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.6.1" data-pdf-page="88">
+<h2>Clause 6.5.4.6.1 — When a TS-User wishes to terminate its relationship with a remote TS-User it does so</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.6.1, PDF p.88</p>
+<p>6.5.4.6.1 When a TS-User wishes to terminate its relationship with a remote TS-User it does so using a T-Disconnect.Request. On receipt of this primitive the local Adaptation Layer shall close all TCP connections using the TCP_CLOSE action on each TCP connection that is open at the time of the request.</p></article><article id="ss098-6-5-4-6-2-p88-471" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.6.2" data-pdf-page="88">
+<h2>Clause 6.5.4.6.2 — Once all data has been transferred (including the request) the TCP connection shall be</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.6.2, PDF p.88</p>
+<p>6.5.4.6.2 Once all data has been transferred (including the request) the TCP connection shall be closed in the other direction.</p></article><article id="ss098-6-5-4-6-3-p88-472" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.6.3" data-pdf-page="88">
+<h2>Clause 6.5.4.6.3 — Note, in order to trigger the equivalent of a T-Disconnect.Indication event at the remote</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.6.3, PDF p.88</p>
+<p>6.5.4.6.3 Note, in order to trigger the equivalent of a T-Disconnect.Indication event at the remote entity, all TCP connections associated with the Safety Layer connection must be closed. The remote TCP entity indicates to the local Adaptation Layer entity that a connection has been closed through the TCP_CLOSED event. When a closing TCP link is the last one remaining for a specific ISO connection the Adaptation Layer shall issue the T-Disconnect.Indication with appropriate error codes towards the TS-User.</p></article><article id="ss098-6-5-4-7-p88-473" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.7" data-pdf-page="88">
+<h2>Clause 6.5.4.7 — Anomalous release by Adaptation Layer</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.7, PDF p.88</p>
+<p>6.5.4.7 Anomalous release by Adaptation Layer</p></article><article id="ss098-6-5-4-7-1-p88-474" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.7.1" data-pdf-page="88">
+<h2>Clause 6.5.4.7.1 — In case of an anomalous disconnection by the local Adaptation Layer entity, all the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.7.1, PDF p.88</p>
+<p>6.5.4.7.1 In case of an anomalous disconnection by the local Adaptation Layer entity, all the TCP associated links shall be released using the TCP_CLOSE action. The user of the remote service shall be informed immediately as soon as the last TCP_CLOSED and shall produce the T-Disconnect.Indication event to the TS-user (as in the normal disconnection but with appropriate Reason and Sub-Reason parameters).</p></article><article id="ss098-6-5-4-8-p88-475" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.8" data-pdf-page="88">
+<h2>Clause 6.5.4.8 — Anomalous release by TCP</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.8, PDF p.88</p>
+<p>6.5.4.8 Anomalous release by TCP</p></article><article id="ss098-6-5-4-8-1-p88-476" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.8.1" data-pdf-page="88">
+<h2>Clause 6.5.4.8.1 — The case of an anomalous release of a TCP link is more complex.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.8.1, PDF p.88</p>
+<p>6.5.4.8.1 The case of an anomalous release of a TCP link is more complex.</p></article><article id="ss098-6-5-4-8-2-p88-477" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.8.2" data-pdf-page="88">
+<h2>Clause 6.5.4.8.2 — If the TCP link released for is the last, it shall cause the dispatch of the T-</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.8.2, PDF p.88</p>
+<p>6.5.4.8.2 If the TCP link released for is the last, it shall cause the dispatch of the T- Disconnect.Indication event with appropriate error to the TS-User.</p></article><article id="ss098-6-5-4-8-3-p88-478" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.8.3" data-pdf-page="88">
+<h2>Clause 6.5.4.8.3 — If any TCP channel being one of two links is released for some reason and the other</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.8.3, PDF p.88</p>
+<p>6.5.4.8.3 If any TCP channel being one of two links is released for some reason and the other link is still active, then the initiating Adaptation Layer shall try to restore the connection with the remote Adaptation Layer without informing the TS-User.</p></article><article id="ss098-6-5-4-8-4-p88-479" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.5.4.8.4" data-pdf-page="88">
+<h2>Clause 6.5.4.8.4 — In the case of re-connect failure the Adaptation Layer shall have to try again for a</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.5.4.8.4, PDF p.88</p>
+<p>6.5.4.8.4 In the case of re-connect failure the Adaptation Layer shall have to try again for a maximum number of times after which it shall have to report the problem through T- Report.Indication with an appropriate error code to the TS-User or a management entity.</p></article><article id="ss098-6-6-p89-480" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6" data-pdf-page="89">
+<h2>Clause 6.6 — Operation and Redundancy Management for different Classes</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6, PDF p.89</p>
+<p>6.6 Operation and Redundancy Management for different Classes of Service</p></article><article id="ss098-6-6-1-p89-481" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1" data-pdf-page="89">
+<h2>Clause 6.6.1 — Class A (optional for implementation)</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1, PDF p.89</p>
+<p>6.6.1 Class A (optional for implementation)</p></article><article id="ss098-6-6-1-1-1-p89-482" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.1.1" data-pdf-page="89">
+<h2>Clause 6.6.1.1.1 — If two links are used between ALE entities, one is configured as the normal one, and</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.1.1, PDF p.89</p>
+<p>6.6.1.1.1 If two links are used between ALE entities, one is configured as the normal one, and the other as the redundant one. This configuration is fixed.</p></article><article id="ss098-6-6-1-1-2-p89-483" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.1.2" data-pdf-page="89">
+<h2>Clause 6.6.1.1.2 — If two links are used between two ALE entities, the link used to establish/release the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.1.2, PDF p.89</p>
+<p>6.6.1.1.2 If two links are used between two ALE entities, the link used to establish/release the ALE connection or to exchange ALE packets containing application data is called the “active link”. The other link is called the “non-active link”. In case of switching between the two links, the active link becomes the non-active link and conversely.</p></article><article id="ss098-6-6-1-1-3-p89-484" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.1.3" data-pdf-page="89">
+<h2>Clause 6.6.1.1.3 — Normal/Redundant and Active/Non-Active are two different concepts. In this way,</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.1.3, PDF p.89</p>
+<p>6.6.1.1.3 Normal/Redundant and Active/Non-Active are two different concepts. In this way, either the normal or redundant link can be active or non-active. Normal/Redundant is physically fixed, while active/non-active is dynamically assigned.</p></article><article id="ss098-6-6-1-1-4-p89-485" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.1.4" data-pdf-page="89">
+<h2>Clause 6.6.1.1.4 — Class A is coded as 0x00.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.1.4, PDF p.89</p>
+<p>6.6.1.1.4 Class A is coded as 0x00.</p></article><article id="ss098-6-6-1-2-p89-486" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2" data-pdf-page="89">
+<h2>Clause 6.6.1.2 — ALE Connection establishment</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2, PDF p.89</p>
+<p>6.6.1.2 ALE Connection establishment</p></article><article id="ss098-6-6-1-2-1-p89-487" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.1" data-pdf-page="89">
+<h2>Clause 6.6.1.2.1 — If the normal link is available, this one shall initially be used to establish the ALE</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.1, PDF p.89</p>
+<p>6.6.1.2.1 If the normal link is available, this one shall initially be used to establish the ALE connection and transfer all user data ALEPKTs between the peers. This path shall have the N/R flag of the ALEPKT header set to value 1.</p></article><article id="ss098-6-6-1-2-2-p89-488" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.2" data-pdf-page="89">
+<h2>Clause 6.6.1.2.2 — As soon as practicable, a second TCP connection shall also be started between two</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.2, PDF p.89</p>
+<p>6.6.1.2.2 As soon as practicable, a second TCP connection shall also be started between two alternative IP addresses for the peers on a different physical link. This connection shall be used as the redundant link if required. The N/R flag for any messages sent on this connection shall have the N/R flag set to 0.</p></article><article id="ss098-6-6-1-2-3-p89-489" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.3" data-pdf-page="89">
+<h2>Clause 6.6.1.2.3 — In case of non availability of the normal link, the redundant link shall be used to</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.3, PDF p.89</p>
+<p>6.6.1.2.3 In case of non availability of the normal link, the redundant link shall be used to establish the ALE connection and to transfer all user data ALEPKTs between the peers. The N/R flag for any messages sent on this connection shall have the N/R flag set to 0.</p></article><article id="ss098-6-6-1-2-4-p89-490" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.4" data-pdf-page="89">
+<h2>Clause 6.6.1.2.4 — The initiator chooses the link that will be used to exchange packet type 1 and 2 - this</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.4, PDF p.89</p>
+<p>6.6.1.2.4 The initiator chooses the link that will be used to exchange packet type 1 and 2 - this will be the active link for the initiator. The packet type 1 and 2 shall not be exchanged on the non-active link. When the responder receives the packet type 1 from one link, this becomes the active one for the responder. The packet type 2 shall be sent on this active link. The initiator shall check that packet type 2 is received on the active link. In case of failure of the check, the ALE connection shall be released.</p></article><article id="ss098-6-6-1-2-5-p89-491" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.5" data-pdf-page="89">
+<h2>Clause 6.6.1.2.5 — The use of packet types 3, 251, 253, 254 and 255 is not allowed before ALE</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.5, PDF p.89</p>
+<p>6.6.1.2.5 The use of packet types 3, 251, 253, 254 and 255 is not allowed before ALE connection establishment (exchange of packet types 1 and 2).</p></article><article id="ss098-6-6-1-2-6-p90-492" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.2.6" data-pdf-page="90">
+<h2>Clause 6.6.1.2.6 — Class A shall be able to operate, without redundancy, on one single physical link and</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.2.6, PDF p.90</p>
+<p>6.6.1.2.6 Class A shall be able to operate, without redundancy, on one single physical link and one single TCP connection. In this case the N/R flag shall be set to 1.</p></article><article id="ss098-6-6-1-3-1-p90-493" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.3.1" data-pdf-page="90">
+<h2>Clause 6.6.1.3.1 — Data ALEPKTs shall be transferred on the active link as described in §6.5.3. When no</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.3.1, PDF p.90</p>
+<p>6.6.1.3.1 Data ALEPKTs shall be transferred on the active link as described in §6.5.3. When no packet is available for transmission on the active link and a „Keep Alive‟ timer configured for this connection has expired then an ALEPKT header with the packet type set to „255‟ (KAA = Keep Alive Active) shall be sent on this link.</p></article><article id="ss098-6-6-1-3-2-p90-494" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.3.2" data-pdf-page="90">
+<h2>Clause 6.6.1.3.2 — To check the availability of the non-active link, a „Keep Alive‟ packets shall also be sent</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.3.2, PDF p.90</p>
+<p>6.6.1.3.2 To check the availability of the non-active link, a „Keep Alive‟ packets shall also be sent in both directions on this link whenever a timer configured for this connection has expired. The packet type of the „Keep Alive‟ shall set to value „254‟ (KANA = Keep Alive Non Active ). There shall be no user data.</p></article><article id="ss098-6-6-1-3-3-p90-495" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.3.3" data-pdf-page="90">
+<h2>Clause 6.6.1.3.3 — If the non-active link is available, the “keep alive” packet on the non-active link (packet</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.3.3, PDF p.90</p>
+<p>6.6.1.3.3 If the non-active link is available, the “keep alive” packet on the non-active link (packet type 254) shall be exchanged between the two peer entities after the connection establishment at the ALE level.</p></article><article id="ss098-6-6-1-3-4-p90-496" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.3.4" data-pdf-page="90">
+<h2>Clause 6.6.1.3.4 — When one of the following messages is received:</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.3.4, PDF p.90</p>
+<p>6.6.1.3.4 When one of the following messages is received: a packet type 254 (Keep Alive Non-Active) on the active link a packet type 255 (Keep Alive Active) on the non-active link a packet type 3 (Data Message) on the non active link then the corresponding switch packet: packet type 251 (data will be sent on the redundant link) or packet type 253 (data will be sent on the normal link)) shall be sent to the peer device.</p></article><article id="ss098-6-6-1-4-p90-497" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4" data-pdf-page="90">
+<h2>Clause 6.6.1.4 — Redundancy Management</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4, PDF p.90</p>
+<p>6.6.1.4 Redundancy Management</p></article><article id="ss098-6-6-1-4-1-p90-498" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.1" data-pdf-page="90">
+<h2>Clause 6.6.1.4.1 — When the active link has failed, data transfer shall be switched to the non-active link.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.1, PDF p.90</p>
+<p>6.6.1.4.1 When the active link has failed, data transfer shall be switched to the non-active link.</p></article><article id="ss098-6-6-1-4-2-p90-499" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.2" data-pdf-page="90">
+<h2>Clause 6.6.1.4.2 — If the active link is the normal link, the switch shall be achieved by either peer sending</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.2, PDF p.90</p>
+<p>6.6.1.4.2 If the active link is the normal link, the switch shall be achieved by either peer sending a SwitchN2R ALEPKT with the packet type set to value „251‟ on the redundant link. User data may be sent in this packet in the normal way. This allows the peer that first detects the error to switch communication paths, thus reducing switch times following a failure. The receiver of a packet type „251‟ shall send and receive any future data packets on the redundant link.</p></article><article id="ss098-6-6-1-4-3-p90-500" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.3" data-pdf-page="90">
+<h2>Clause 6.6.1.4.3 — Once data transfer is properly established on the redundant link then the Adaptation</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.3, PDF p.90</p>
+<p>6.6.1.4.3 Once data transfer is properly established on the redundant link then the Adaptation Layer that originated the call shall attempt to re-establish the ‟normal‟ link connection. When successful, the Adaptation Layer shall use „Keep Alive‟ packets for non-active link to monitor the „normal‟ connection. However, data transfer shall not revert to this link unless a problem is detected on the redundant link. When needed this shall be achieved by either Adaptation Layer sending, on the normal link, a SwitchR2N ALEPKT with the type set to the value „253‟. User data may be sent in this packet in the normal way.</p></article><article id="ss098-6-6-1-4-4-p91-501" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.4" data-pdf-page="91">
+<h2>Clause 6.6.1.4.4 — If the active link is the redundant link and it fails, the switch shall be achieved by either</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.4, PDF p.91</p>
+<p>6.6.1.4.4 If the active link is the redundant link and it fails, the switch shall be achieved by either peer sending a SwitchR2N ALEPKT with the packet type set to value „253‟ on the normal link. User data may be sent in this packet in the normal way. The receiver of a packet type „253‟ shall send and receive any future data packets on the normal link.</p></article><article id="ss098-6-6-1-4-5-p91-502" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.5" data-pdf-page="91">
+<h2>Clause 6.6.1.4.5 — Once data transfer is properly established on the normal link, the Adaptation Layer that</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.5, PDF p.91</p>
+<p>6.6.1.4.5 Once data transfer is properly established on the normal link, the Adaptation Layer that originated the call shall attempt to re-establish the redundant link connection. When successful, the Adaptation Layer shall use „Keep Alive‟ packets for non-active link to monitor the redundant link connection. However, data transfer shall not revert to this link unless a problem is detected on the normal link. When needed this shall be achieved by either Adaptation Layer sending, on the redundant link, a SwitchN2R ALEPKT with the type set to the value „251‟.</p></article><article id="ss098-6-6-1-4-6-p91-503" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.4.6" data-pdf-page="91">
+<h2>Clause 6.6.1.4.6 — Note that the message type of the „Keep Alive‟ depends on whether a link is being</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.4.6, PDF p.91</p>
+<p>6.6.1.4.6 Note that the message type of the „Keep Alive‟ depends on whether a link is being used to transfer data or not. It does not depend on whether the link is the nominated normal or redundant path. The link transferring data always uses „Keep Alive‟ packet type „255‟, the link that is available as a standby always uses „Keep Alive‟ packet „254‟. This technique enables the system to quickly recover if „switch‟ messages are lost or delayed. (If a „254‟ packet is received on the new active link after a switch message has been sent then another switch message should be transmitted until either data or „255‟ messages are received on the active link).</p></article><article id="ss098-6-6-1-5-1-p91-504" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.5.1" data-pdf-page="91">
+<h2>Clause 6.6.1.5.1 — When a Safety Layer entity wishes to terminate its relationship with a remote entity it</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.5.1, PDF p.91</p>
+<p>6.6.1.5.1 When a Safety Layer entity wishes to terminate its relationship with a remote entity it does so using a T-Disconnect.Request. The DI ALEPKT is exchanged on the active link. On receipt of this primitive the local Adaptation Layer shall close all TCP connections using the TCP-CLOSE primitive on each TCP connection that is open at the time of the request. Once all data has been transferred (including the request) the TCP connection shall be closed in the other direction.</p></article><article id="ss098-6-6-1-5-2-p91-505" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.5.2" data-pdf-page="91">
+<h2>Clause 6.6.1.5.2 — A packet type 4 (DI) can be sent only in the following cases:</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.5.2, PDF p.91</p>
+<p>6.6.1.5.2 A packet type 4 (DI) can be sent only in the following cases: by the initiator after the packet type 1 was sent; by the responder after the packet type 1 type was received. Note, in order to trigger the equivalent of a T-Disconnect.Indication at the remote entity, all TCP connections associated with the Safety Layer connection shall be closed. The remote TCP entity indicates to the Adaptation Layer entity that a connection has been closed through TCP-CLOSING event. When a TCP connection is the last remaining for this Safety Layer relationship then this triggers the Adaptation Layer to send a T-Disconnect.Indication with appropriate reason codes to its local Safety Layer.</p></article><article id="ss098-6-6-1-6-1-p92-506" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.1" data-pdf-page="92">
+<h2>Clause 6.6.1.6.1 — In the case of an abnormal release by the local Safety Layer entity, all associated TCP</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.1, PDF p.92</p>
+<p>6.6.1.6.1 In the case of an abnormal release by the local Safety Layer entity, all associated TCP connections are released using TCP-CLOSE. The remote service user is to be immediately informed when the last TCP-CLOSING event triggers the T- Disconnect.Indication primitive (as in normal release but with different codes described in §6.7).</p></article><article id="ss098-6-6-1-6-2-p92-507" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.2" data-pdf-page="92">
+<h2>Clause 6.6.1.6.2 — The case of abnormal release of a TCP connection is more complex.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.2, PDF p.92</p>
+<p>6.6.1.6.2 The case of abnormal release of a TCP connection is more complex.</p></article><article id="ss098-6-6-1-6-3-p92-508" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.3" data-pdf-page="92">
+<h2>Clause 6.6.1.6.3 — If a TCP connection is the last remaining this triggers a T-Disconnect.Indication with</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.3, PDF p.92</p>
+<p>6.6.1.6.3 If a TCP connection is the last remaining this triggers a T-Disconnect.Indication with appropriate reason codes.</p></article><article id="ss098-6-6-1-6-4-p92-509" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.4" data-pdf-page="92">
+<h2>Clause 6.6.1.6.4 — If the released connection is the non-active link (the active link being still available)</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.4, PDF p.92</p>
+<p>6.6.1.6.4 If the released connection is the non-active link (the active link being still available) then the Adaptation Layer shall attempt to re-connect to the remote entity without informing the Adaptation Layer user.</p></article><article id="ss098-6-6-1-6-5-p92-510" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.5" data-pdf-page="92">
+<h2>Clause 6.6.1.6.5 — If the connection closed is the active link and the non-active link is still operating then</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.5, PDF p.92</p>
+<p>6.6.1.6.5 If the connection closed is the active link and the non-active link is still operating then the Adaptation Layer shall first switch all data transfer to the non-active link before attempting to re-establish the normal connection..</p></article><article id="ss098-6-6-1-6-6-p92-511" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.6" data-pdf-page="92">
+<h2>Clause 6.6.1.6.6 — If the link that notifies the Adaptation Layer of connection loss is the last remaining</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.6, PDF p.92</p>
+<p>6.6.1.6.6 If the link that notifies the Adaptation Layer of connection loss is the last remaining circuit then this triggers a T-Disconnect.Indication with appropriate reason codes. It must be stressed that in order to trigger a T-Disconnect.Indication, all TCP connections associated with the Safety Layer connection must be closed. The remote TCP entity indicates to the Adaptation Layer entity that a connection has been closed through TCP-CLOSING event. If the TCP connection has failed the TCP indicates that the connection has been closed through TCP-ERROR event.</p></article><article id="ss098-6-6-1-6-7-p92-512" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.1.6.7" data-pdf-page="92">
+<h2>Clause 6.6.1.6.7 — If the Adaptation Layer believes that a connection is unusable for some reason then it</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.1.6.7, PDF p.92</p>
+<p>6.6.1.6.7 If the Adaptation Layer believes that a connection is unusable for some reason then it may remove the connection using the ABORT primitive. Unless this is the last TCP connection open it shall not inform the Safety Layer.</p></article><article id="ss098-6-6-2-1-1-p92-513" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.1" data-pdf-page="92">
+<h2>Clause 6.6.2.1.1 — For Class D, all ALEPKTs are sent on all connections. Transport connections shall</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.1, PDF p.92</p>
+<p>6.6.2.1.1 For Class D, all ALEPKTs are sent on all connections. Transport connections shall support one single safe connection between two entities. One TCP connection shall be created at the same time on each physical link.</p></article><article id="ss098-6-6-2-1-2-p93-514" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.2" data-pdf-page="93">
+<h2>Clause 6.6.2.1.2 — One, two or more physical links may be used. This section is written assuming two</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.2, PDF p.93</p>
+<p>6.6.2.1.2 One, two or more physical links may be used. This section is written assuming two physical links. The following requirements should be modified to reflect the number of physical links available.</p></article><article id="ss098-6-6-2-1-3-p93-515" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.3" data-pdf-page="93">
+<h2>Clause 6.6.2.1.3 — For example, on one single physical link (no redundancy) and therefore one single</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.3, PDF p.93</p>
+<p>6.6.2.1.3 For example, on one single physical link (no redundancy) and therefore one single TCP connection, the N/R flag shall be set to „1‟.</p></article><article id="ss098-6-6-2-1-4-p93-516" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.4" data-pdf-page="93">
+<h2>Clause 6.6.2.1.4 — Connection Establishment packets AU1 ALEPKT (CR) and AU2 ALEPKT (CC)</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.4, PDF p.93</p>
+<p>6.6.2.1.4 Connection Establishment packets AU1 ALEPKT (CR) and AU2 ALEPKT (CC) complete with User Data, shall be sent in an identical way on both the TCP transport connections using the Transport Sequence Number value of “0”.</p></article><article id="ss098-6-6-2-1-5-p93-517" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.5" data-pdf-page="93">
+<h2>Clause 6.6.2.1.5 — During the connection establishment phase, the ALE entity shall use the first AU1 and</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.5, PDF p.93</p>
+<p>6.6.2.1.5 During the connection establishment phase, the ALE entity shall use the first AU1 and AU2 ALEPKT received, and discard any copies received.</p></article><article id="ss098-6-6-2-1-6-p93-518" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.1.6" data-pdf-page="93">
+<h2>Clause 6.6.2.1.6 — Class D is coded as 0x03.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.1.6, PDF p.93</p>
+<p>6.6.2.1.6 Class D is coded as 0x03.</p></article><article id="ss098-6-6-2-2-1-p93-519" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.1" data-pdf-page="93">
+<h2>Clause 6.6.2.2.1 — All Data ALEPKTs shall be transferred on both TCP connections. The same Transport</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.1, PDF p.93</p>
+<p>6.6.2.2.1 All Data ALEPKTs shall be transferred on both TCP connections. The same Transport Sequence Number shall be transmitted on both TCP connections.</p></article><article id="ss098-6-6-2-2-2-p93-520" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.2" data-pdf-page="93">
+<h2>Clause 6.6.2.2.2 — The receiver shall observe the ALEPKTs received on both TCP connections.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.2, PDF p.93</p>
+<p>6.6.2.2.2 The receiver shall observe the ALEPKTs received on both TCP connections.</p></article><article id="ss098-6-6-2-2-3-p93-521" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.3" data-pdf-page="93">
+<h2>Clause 6.6.2.2.3 — The receiver shall discard any ALEPKT with a Transport Sequence Number which has</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.3, PDF p.93</p>
+<p>6.6.2.2.3 The receiver shall discard any ALEPKT with a Transport Sequence Number which has the same value as (or less than) an ALEPKT that has already been passed to the TS user.</p></article><article id="ss098-6-6-2-2-4-p93-522" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.4" data-pdf-page="93">
+<h2>Clause 6.6.2.2.4 — At least two different behaviours are possible at the receiver side:</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.4, PDF p.93</p>
+<p>6.6.2.2.4 At least two different behaviours are possible at the receiver side: a) An ALE packet containing a Transport Sequence Number greater than the last one delivered to the ALE user shall be passed to the ALE user. b) An ALE packet containing a Transport Sequence Number equal to the „previous Transport Sequence Number delivered to the ALE user + 1‟ shall be passed to the ALE user. Packets containing a Transport Sequence Number greater than the last one +1 shall be discarded.</p></article><article id="ss098-6-6-2-2-5-p93-523" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.5" data-pdf-page="93">
+<h2>Clause 6.6.2.2.5 — The choice between a) and b) is a configuration matter.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.5, PDF p.93</p>
+<p>6.6.2.2.5 The choice between a) and b) is a configuration matter.</p></article><article id="ss098-6-6-2-2-6-p93-524" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.6" data-pdf-page="93">
+<h2>Clause 6.6.2.2.6 — Behaviour b) has to be selected if no missing ALEPKT is allowed.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.6, PDF p.93</p>
+<p>6.6.2.2.6 Behaviour b) has to be selected if no missing ALEPKT is allowed.</p></article><article id="ss098-6-6-2-2-7-p93-525" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.2.7" data-pdf-page="93">
+<h2>Clause 6.6.2.2.7 — In the case of any failure of the data transfer on one TCP channel, the Adaptation</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.2.7, PDF p.93</p>
+<p>6.6.2.2.7 In the case of any failure of the data transfer on one TCP channel, the Adaptation Layer shall not make any attempt to resolve the problem, but shall simply release the connection and reject the data; this failure can be reported to the ALE user, as an implementation matter.</p></article><article id="ss098-6-6-2-3-p93-526" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.3" data-pdf-page="93">
+<h2>Clause 6.6.2.3 — Redundancy Management</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.3, PDF p.93</p>
+<p>6.6.2.3 Redundancy Management</p></article><article id="ss098-6-6-2-3-1-p94-527" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.3.1" data-pdf-page="94">
+<h2>Clause 6.6.2.3.1 — When a transmitter is unable to send data on a TCP connection or a TCP connection</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.3.1, PDF p.94</p>
+<p>6.6.2.3.1 When a transmitter is unable to send data on a TCP connection or a TCP connection is deemed in error the TCP connection shall be closed. The sending of Data ALEPKTs through the other link shall continue. The Adaptation Layer entity that initiated the original connection (the initiator) shall attempt to re-establish any failed TCP connection.</p></article><article id="ss098-6-6-2-3-2-p94-528" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.3.2" data-pdf-page="94">
+<h2>Clause 6.6.2.3.2 — At the receiver, any TCP connection deemed to have failed shall be closed. The</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.3.2, PDF p.94</p>
+<p>6.6.2.3.2 At the receiver, any TCP connection deemed to have failed shall be closed. The receiver shall take no further action unless it was the initiator of the TCP call. In this case it shall attempt to re-establish the connection.</p></article><article id="ss098-6-6-2-3-3-p94-529" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.3.3" data-pdf-page="94">
+<h2>Clause 6.6.2.3.3 — All ALEPKTs shall be taken from the remaining TCP connection.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.3.3, PDF p.94</p>
+<p>6.6.2.3.3 All ALEPKTs shall be taken from the remaining TCP connection.</p></article><article id="ss098-6-6-2-4-p94-530" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.4" data-pdf-page="94">
+<h2>Clause 6.6.2.4 — Connection Monitoring</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.4, PDF p.94</p>
+<p>6.6.2.4 Connection Monitoring</p></article><article id="ss098-6-6-2-4-1-p94-531" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.4.1" data-pdf-page="94">
+<h2>Clause 6.6.2.4.1 — Connection and physical link monitoring in Class D shall be performed using the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.4.1, PDF p.94</p>
+<p>6.6.2.4.1 Connection and physical link monitoring in Class D shall be performed using the standard Keep Alive feature provided by TCP.</p></article><article id="ss098-6-6-2-4-2-p94-532" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.4.2" data-pdf-page="94">
+<h2>Clause 6.6.2.4.2 — Both TCP entities shall enable the Keep Alive feature.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.4.2, PDF p.94</p>
+<p>6.6.2.4.2 Both TCP entities shall enable the Keep Alive feature.</p></article><article id="ss098-6-6-2-4-3-p94-533" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.2.4.3" data-pdf-page="94">
+<h2>Clause 6.6.2.4.3 — NOTE: In case the Application is sending data in a cyclic way, connection monitoring at</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.2.4.3, PDF p.94</p>
+<p>6.6.2.4.3 NOTE: In case the Application is sending data in a cyclic way, connection monitoring at TCP level is not required.</p></article><article id="ss098-6-6-3-1-1-p94-534" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.6.3.1.1" data-pdf-page="94">
+<h2>Clause 6.6.3.1.1 — This section summarises the various ALEPKTs used by ALE.</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.6.3.1.1, PDF p.94</p>
+<p>6.6.3.1.1 This section summarises the various ALEPKTs used by ALE. ALEPKT ALEPKT scope User Data link Class Type name using 1 AU1 (CR) Request a AU1 Class D: N A &amp; D connection to peer and R Class A: active link 2 AU2 (CC) Accept a AU2 Class D: N A &amp; D connection from and R peer Class A: active link 3 DT Transfer user data SaPDU Class D: N A &amp; D and R Class A: active link 4 DI Release a DI SaPDU Class D: N A &amp; D connection and R Class A: active link</p></article><article id="ss098-251-p95-535" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="251" data-pdf-page="95">
+<h2>Clause 251 — SwitchN2R Switch data traffic None or SaPDU R A</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 251, PDF p.95</p>
+<p>251 SwitchN2R Switch data traffic None or SaPDU R A to the R link</p></article><article id="ss098-253-p95-536" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="253" data-pdf-page="95">
+<h2>Clause 253 — SwitchR2N Switch data traffic None or SaPDU N A</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 253, PDF p.95</p>
+<p>253 SwitchR2N Switch data traffic None or SaPDU N A to the N link</p></article><article id="ss098-254-p95-537" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="254" data-pdf-page="95">
+<h2>Clause 254 — KANA Keep alive on non none Non active A</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 254, PDF p.95</p>
+<p>254 KANA Keep alive on non none Non active A active link</p></article><article id="ss098-255-p95-538" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="255" data-pdf-page="95">
+<h2>Clause 255 — KAA Keep alive on none Active A</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 255, PDF p.95</p>
+<p>255 KAA Keep alive on none Active A active link Table 10: Summary of ALEPKTs</p></article><article id="ss098-6-7-p95-539" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7" data-pdf-page="95">
+<h2>Clause 6.7 — Management of Adaptation Layer - ALEPKT Error Handling</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7, PDF p.95</p>
+<p>6.7 Management of Adaptation Layer - ALEPKT Error Handling</p></article><article id="ss098-6-7-1-1-p95-540" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1" data-pdf-page="95">
+<h2>Clause 6.7.1.1 — Supervision/Diagnostics</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1, PDF p.95</p>
+<p>6.7.1.1 Supervision/Diagnostics</p></article><article id="ss098-6-7-1-1-1-p95-541" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1.1" data-pdf-page="95">
+<h2>Clause 6.7.1.1.1 — As with the normal Euroradio service the Adaptation Layer should wherever possible</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1.1, PDF p.95</p>
+<p>6.7.1.1.1 As with the normal Euroradio service the Adaptation Layer should wherever possible keep communications faults hidden from the TS-User entity. Only when the problem cannot be solved should the Adaptation Layer user be informed.</p></article><article id="ss098-6-7-1-1-2-p95-542" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1.2" data-pdf-page="95">
+<h2>Clause 6.7.1.1.2 — Unrecoverable errors reported by the network shall be notified via the Adaptation Layer</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1.2, PDF p.95</p>
+<p>6.7.1.1.2 Unrecoverable errors reported by the network shall be notified via the Adaptation Layer to the Safety Layer.</p></article><article id="ss098-6-7-1-1-3-p95-543" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1.3" data-pdf-page="95">
+<h2>Clause 6.7.1.1.3 — Where a ALEPKT fails its checksum the Adaptation Layer Entity shall reset the TCP</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1.3, PDF p.95</p>
+<p>6.7.1.1.3 Where a ALEPKT fails its checksum the Adaptation Layer Entity shall reset the TCP connection on which it was received.</p></article><article id="ss098-6-7-1-1-4-p95-544" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1.4" data-pdf-page="95">
+<h2>Clause 6.7.1.1.4 — Where errors are received from the primary TCP connections of Class A services then</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1.4, PDF p.95</p>
+<p>6.7.1.1.4 Where errors are received from the primary TCP connections of Class A services then action shall be taken according to the rules described in §6.6.1.</p></article><article id="ss098-6-7-1-1-5-p95-545" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="6.7.1.1.5" data-pdf-page="95">
+<h2>Clause 6.7.1.1.5 — Where the Adaptation Layer cannot maintain transparent service the following errors</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 6.7.1.1.5, PDF p.95</p>
+<p>6.7.1.1.5 Where the Adaptation Layer cannot maintain transparent service the following errors shall be handled and reported to the user by the Adaptation Layer entity. The table 11 identifies some possible reasons and sub-reasons and describes possible corresponding error handling action at transport level. Other actions are still possible, for specific implementations. Reason and sub-reason codes are local implementation matter. Reason Sub-reason Handling action Code Description Code Description</p></article><article id="ss098-0-p95-546" class="evidence-chunk" data-document="SUBSET-098" data-version="3.0.0" data-clause="0" data-pdf-page="95">
+<h2>Clause 0 — Normal 0 Indication passed to the user in the</h2>
+<p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause 0, PDF p.95</p>
+<p>0 Normal 0 Indication passed to the user in the reason parameter of the T- release Disconnect.Indication. 1 Network error 1 Number not assigned; Error indication is created by the invalid number format local Adaptation Layer and passed to the user in the reason parameter</p></article></section></main></body></html>
