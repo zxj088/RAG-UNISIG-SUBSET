@@ -10,6 +10,22 @@
   let lastResults = [];
 
   const tokens = value => (value.toLowerCase().match(/[a-z0-9]+(?:[-'][a-z0-9]+)?/g) || []).filter(t => !STOP.has(t));
+  const QUERY_EXPANSIONS = {
+    header: ['field', 'byte', 'format', 'endian'],
+    structure: ['field', 'byte', 'format', 'layout'],
+    structured: ['field', 'byte', 'format', 'layout'],
+    layout: ['field', 'byte', 'format', 'structure'],
+    length: ['byte', 'bytes', 'octet', 'octets', 'size'],
+    lengths: ['byte', 'bytes', 'octet', 'octets', 'size'],
+    timestamp: ['stamp', 'tts'],
+    timestamps: ['stamp', 'tts'],
+    delete: ['deletion', 'deleted'],
+    deleted: ['delete', 'deletion']
+  };
+  const queryTokens = value => {
+    const direct = tokens(value);
+    return [...new Set(direct.flatMap(token => [token, ...(QUERY_EXPANSIONS[token] || [])]))];
+  };
   const escapeHtml = value => String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
   function scoreChunk(chunk, queryTokens, rawQuery) {
@@ -32,10 +48,10 @@
     return clause.split('.').slice(0, -1).join('.');
   }
 
-  function retrieve(question, limit = 10) {
-    const queryTokens = tokens(question);
+  function retrieve(question, limit = 16) {
+    const expandedTokens = queryTokens(question);
     const ranked = index.chunks
-      .map(chunk => ({chunk, score: scoreChunk(chunk, queryTokens, question)}))
+      .map(chunk => ({chunk, score: scoreChunk(chunk, expandedTokens, question)}))
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score)
     const seeds = ranked.slice(0, 6);
@@ -43,7 +59,7 @@
     for (const seed of seeds) {
       const position = index.chunks.findIndex(chunk => chunk.id === seed.chunk.id);
       const parent = clauseParent(seed.chunk.clause);
-      for (const offset of [-1, 1]) {
+      for (const offset of [-1, 1, 2, 3, 4]) {
         const neighbor = index.chunks[position + offset];
         if (!neighbor || !parent || clauseParent(neighbor.clause) !== parent || selected.has(neighbor.id)) continue;
         selected.set(neighbor.id, {chunk: neighbor, score: seed.score * 0.45, context: true});
