@@ -40,6 +40,7 @@
     }
     const phrase = rawQuery.trim().toLowerCase();
     if (phrase.length > 6 && haystack.includes(phrase)) score += 12;
+    if (queryTokens.includes('sai') && queryTokens.includes('header') && haystack.includes('sai') && haystack.includes('header')) score += 10;
     return score / Math.sqrt(Math.max(1, (chunk.text || '').length / 260));
   }
 
@@ -56,7 +57,7 @@
       .sort((a, b) => b.score - a.score)
     const seeds = ranked.slice(0, 6);
     const selected = new Map(seeds.map(item => [item.chunk.id, {...item, context: false}]));
-    for (const seed of seeds) {
+    for (const seed of seeds.slice(0, 3)) {
       const position = index.chunks.findIndex(chunk => chunk.id === seed.chunk.id);
       const parent = clauseParent(seed.chunk.clause);
       for (const offset of [-1, 1, 2, 3, 4]) {
@@ -78,7 +79,7 @@
       `PDF page: ${chunk.page}`,
       `Text: ${chunk.text}`
     ].join('\n')).join('\n\n');
-    return `Answer the question using only the evidence below.\nDo not invent requirements or fill gaps from memory.\nCite the clause and PDF page for every material claim.\nIf the evidence is insufficient, say that the answer cannot be confirmed.\n\nQuestion:\n${question}\n\n${evidence}\n\nAuthoritative source:\n${index.sourceUrl}`;
+    return `Answer the question using only the evidence below.\nDo not invent requirements or fill gaps from memory.\nCite the clause and PDF page for every material claim.\nPrefer explicit textual requirements over flattened figure text. Do not infer byte boundaries from flattened figure text when explicit field-length evidence is absent.\nIf the evidence is insufficient, say that the answer cannot be confirmed.\n\nQuestion:\n${question}\n\n${evidence}\n\nAuthoritative source:\n${index.sourceUrl}`;
   }
 
   function render(results) {
