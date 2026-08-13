@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SUBSET-098 Local Retrieval Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .rag-shell{max-width:980px;margin:0 auto;padding:48px 24px 80px}.rag-panel{background:#fff;border:1px solid #dfe5e8;border-radius:18px;padding:24px;box-shadow:0 12px 34px rgba(16,38,47,.08)}.rag-panel+ .rag-panel{margin-top:20px}.rag-controls{display:grid;gap:14px}.rag-controls textarea{min-height:110px;resize:vertical;padding:14px;border:1px solid #aebbc1;border-radius:10px;font:inherit}.rag-actions{display:flex;gap:10px;flex-wrap:wrap}.rag-actions button,.file-label{border:0;border-radius:999px;padding:11px 18px;background:#0d5968;color:#fff;font:inherit;font-weight:700;cursor:pointer}.rag-actions button.secondary,.file-label.secondary{background:#e7f0f2;color:#123d47}.file-label input{display:none}.rag-status{color:#52666d;margin:0}.rag-results{display:grid;gap:14px}.rag-result{border:1px solid #dfe5e8;border-radius:14px;padding:18px}.rag-result header{display:flex;justify-content:space-between;gap:12px;align-items:start}.rag-result h3{margin:0;font-size:1rem}.rag-score{font-size:.82rem;color:#61757c}.rag-result p{line-height:1.6}.rag-source{font-size:.9rem;color:#52666d}.rag-warning{border-left:4px solid #d38b00;padding:12px 14px;background:#fff7df}.rag-empty{color:#61757c}.rag-prompt{width:100%;min-height:230px;padding:14px;border:1px solid #aebbc1;border-radius:10px;font:inherit}.rag-intro{max-width:760px}.rag-intro h1{margin-bottom:12px}.rag-intro p{line-height:1.65}.rag-meta{display:flex;gap:16px;flex-wrap:wrap;color:#52666d;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a><nav><a href="subset-098.html">SUBSET-098 catalogue page</a></nav></header>
+  <main class="rag-shell">
+    <section class="rag-intro">
+      <div class="eyebrow"><span></span> Local retrieval prototype</div>
+      <h1>Ask SUBSET-098</h1>
+      <p>Load the locally generated JSON index, enter a question, and retrieve the most relevant clauses. Document text stays in this browser session. This prototype retrieves evidence; Copilot can then generate an answer from the selected evidence.</p>
+      <p class="rag-warning"><strong>Safety notice:</strong> Results are search aids, not authoritative engineering conclusions. Verify every answer against the official ERA document.</p>
+    </section>
+
+    <section class="rag-panel rag-controls">
+      <div class="rag-actions">
+        <label class="file-label secondary">Load local index<input id="index-file" type="file" accept="application/json,.json"></label>
+      </div>
+      <p id="status" class="rag-status">No index loaded.</p>
+      <label for="question"><strong>Question</strong></label>
+      <textarea id="question" placeholder="Example: How is the SAI header structured for safe data transfer?"></textarea>
+      <div class="rag-actions">
+        <button id="search" type="button">Retrieve evidence</button>
+        <button id="copy" class="secondary" type="button" disabled>Copy Copilot prompt</button>
+      </div>
+    </section>
+
+    <section class="rag-panel">
+      <h2>Retrieved evidence</h2>
+      <div id="results" class="rag-results"><p class="rag-empty">Load an index and ask a question.</p></div>
+    </section>
+
+    <section class="rag-panel">
+      <h2>Copilot prompt</h2>
+      <textarea id="prompt" class="rag-prompt" readonly placeholder="The grounded prompt will appear here."></textarea>
+    </section>
+  </main>
+  <script src="subset-098-rag.js"></script>
+</body>
+</html>
+
