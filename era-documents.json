@@ -6,7 +6,8 @@
     "version": "Approved",
     "note": "Note",
     "type": "DOCX",
-    "url": "https://www.era.europa.eu/system/files/2023-09/sos3_readme_file_-_set_3_-_archived_specs.docx"
+    "url": "https://www.era.europa.eu/system/files/2023-09/sos3_readme_file_-_set_3_-_archived_specs.docx",
+    "page": "reference.html"
   },
   {
     "index": "03",
@@ -15,7 +16,8 @@
     "version": "3.3.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index003_-_subset-023_v330.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index003_-_subset-023_v330.pdf",
+    "page": "subset-023.html"
   },
   {
     "index": "04",
@@ -24,7 +26,8 @@
     "version": "3.6.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index004_-_subset-026_v360.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index004_-_subset-026_v360.zip",
+    "page": "subset-026.html"
   },
   {
     "index": "05",
@@ -33,7 +36,8 @@
     "version": "3.3.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index005_-_subset-027_v330.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index005_-_subset-027_v330.pdf",
+    "page": "subset-027.html"
   },
   {
     "index": "06",
@@ -42,7 +46,8 @@
     "version": "3.6.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index006_-_era_ertms_015560_v360.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index006_-_era_ertms_015560_v360.zip",
+    "page": "era-ertms-015560.html"
   },
   {
     "index": "07",
@@ -51,7 +56,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index007_-_subset-034_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index007_-_subset-034_v320.pdf",
+    "page": "subset-034.html"
   },
   {
     "index": "08",
@@ -60,7 +66,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index008_-_subset-035_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index008_-_subset-035_v320.pdf",
+    "page": "subset-035.html"
   },
   {
     "index": "09",
@@ -69,7 +76,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index009_-_subset-036_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index009_-_subset-036_v310.pdf",
+    "page": "subset-036.html"
   },
   {
     "index": "10",
@@ -78,7 +86,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index010_-_subset-037_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index010_-_subset-037_v320.pdf",
+    "page": "subset-037.html"
   },
   {
     "index": "11",
@@ -87,7 +96,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index011_-_subset-038_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index011_-_subset-038_v310.pdf",
+    "page": "subset-038.html"
   },
   {
     "index": "12",
@@ -96,7 +106,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index012_-_subset-039_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index012_-_subset-039_v320.pdf",
+    "page": "subset-039.html"
   },
   {
     "index": "13",
@@ -105,7 +116,8 @@
     "version": "3.4.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index013_-_subset-040_v340.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index013_-_subset-040_v340.pdf",
+    "page": "subset-040.html"
   },
   {
     "index": "14",
@@ -114,7 +126,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index014_-_subset-041_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index014_-_subset-041_v320.pdf",
+    "page": "subset-041.html"
   },
   {
     "index": "16",
@@ -123,7 +136,8 @@
     "version": "2.4.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index016_-_subset-044_v240.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index016_-_subset-044_v240.pdf",
+    "page": "subset-044.html"
   },
   {
     "index": "19",
@@ -132,7 +146,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index019_-_subset-047_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index019_-_subset-047_v300.pdf",
+    "page": "subset-047.html"
   },
   {
     "index": "20",
@@ -141,7 +156,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index020_-_subset-048_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index020_-_subset-048_v300.pdf",
+    "page": "subset-048.html"
   },
   {
     "index": "23",
@@ -150,7 +166,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index023_-_subset-054_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index023_-_subset-054_v300.pdf",
+    "page": "subset-054.html"
   },
   {
     "index": "25",
@@ -159,7 +176,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index025_-_subset-056_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index025_-_subset-056_v300.pdf",
+    "page": "subset-056.html"
   },
   {
     "index": "26",
@@ -168,7 +186,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index026_-_subset-057_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index026_-_subset-057_v310.pdf",
+    "page": "subset-057.html"
   },
   {
     "index": "27",
@@ -177,7 +196,8 @@
     "version": "3.6.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index027_-_subset-091_v360.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index027_-_subset-091_v360.pdf",
+    "page": "subset-091.html"
   },
   {
     "index": "29",
@@ -186,7 +206,8 @@
     "version": "2.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index029_-_subset-102_v200.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index029_-_subset-102_v200.pdf",
+    "page": "subset-102.html"
   },
   {
     "index": "31",
@@ -195,7 +216,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index031_-_subset-094_v310_era-opi-2017-5.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index031_-_subset-094_v310_era-opi-2017-5.zip",
+    "page": "subset-094.html"
   },
   {
     "index": "32",
@@ -204,7 +226,8 @@
     "version": "8.0.0",
     "note": "Note 10",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index032_-_eirene_frs_v800.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index032_-_eirene_frs_v800.pdf",
+    "page": "eirene-frs.html"
   },
   {
     "index": "33",
@@ -213,7 +236,8 @@
     "version": "16.0.0",
     "note": "Note 10",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index033_-_eirene_srs_v1600.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index033_-_eirene_srs_v1600.pdf",
+    "page": "eirene-srs.html"
   },
   {
     "index": "34",
@@ -222,7 +246,8 @@
     "version": "13.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index034_-a11t6001_v1300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index034_-a11t6001_v1300.pdf",
+    "page": "a11t6001.html"
   },
   {
     "index": "36 c",
@@ -231,7 +256,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index036c_-_subset-074-2_v310.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index036c_-_subset-074-2_v310.zip",
+    "page": "subset-074-2.html"
   },
   {
     "index": "37 b",
@@ -240,7 +266,8 @@
     "version": "3.3.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037b_-_subset-076-5-2_v330_era-opi-2017-5.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037b_-_subset-076-5-2_v330_era-opi-2017-5.zip",
+    "page": "subset-076-5-2.html"
   },
   {
     "index": "37 c",
@@ -249,7 +276,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_1_out_of_6.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_1_out_of_6.zip",
+    "page": "subset-076-6-3-part-1.html"
   },
   {
     "index": "37 c",
@@ -258,7 +286,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_2_out_of_6.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_2_out_of_6.zip",
+    "page": "subset-076-6-3-part-2.html"
   },
   {
     "index": "37 c",
@@ -267,7 +296,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_3_out_of_6.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_3_out_of_6.zip",
+    "page": "subset-076-6-3-part-3.html"
   },
   {
     "index": "37 c",
@@ -276,7 +306,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_4_out_of_6.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_4_out_of_6.zip",
+    "page": "subset-076-6-3-part-4.html"
   },
   {
     "index": "37 c",
@@ -285,7 +316,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_5_out_of_6_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_5_out_of_6_0.zip",
+    "page": "subset-076-6-3-part-5.html"
   },
   {
     "index": "37 c",
@@ -294,7 +326,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_6_out_of_6.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/subset_076-6-3_v320_6_out_of_6.zip",
+    "page": "subset-076-6-3-part-6.html"
   },
   {
     "index": "37 d",
@@ -303,7 +336,8 @@
     "version": "3.3.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037d_-_subset-076-7_v330_era-opi-2017-5.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index037d_-_subset-076-7_v330_era-opi-2017-5.zip",
+    "page": "subset-076-7.html"
   },
   {
     "index": "38",
@@ -312,7 +346,8 @@
     "version": "2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index038_-_06e068_v20.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index038_-_06e068_v20.pdf",
+    "page": "06e068.html"
   },
   {
     "index": "39",
@@ -321,7 +356,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index039_-_subset-092-1_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index039_-_subset-092-1_v310.pdf",
+    "page": "subset-092-1.html"
   },
   {
     "index": "40",
@@ -330,7 +366,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index040_-_subset-092-2_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index040_-_subset-092-2_v310.pdf",
+    "page": "subset-092-2.html"
   },
   {
     "index": "43",
@@ -339,7 +376,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index043_-_subset-085_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index043_-_subset-085_v300.pdf",
+    "page": "subset-085.html"
   },
   {
     "index": "45",
@@ -348,7 +386,8 @@
     "version": "2.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index045_-_subset-101_v200.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index045_-_subset-101_v200.pdf",
+    "page": "subset-101.html"
   },
   {
     "index": "46",
@@ -357,7 +396,8 @@
     "version": "2.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index046_-_subset-100_v200.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index046_-_subset-100_v200.pdf",
+    "page": "subset-100.html"
   },
   {
     "index": "48",
@@ -366,7 +406,8 @@
     "version": "-",
     "note": "Note 4",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index48_reserved_document.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index48_reserved_document.pdf",
+    "page": "reserved.html"
   },
   {
     "index": "49",
@@ -375,7 +416,8 @@
     "version": "3.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index049_-_subset-059_v310.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index049_-_subset-059_v310.pdf",
+    "page": "subset-059.html"
   },
   {
     "index": "050",
@@ -384,7 +426,8 @@
     "version": "1.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index050_-_subset-103_v110.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index050_-_subset-103_v110.pdf",
+    "page": "subset-103.html"
   },
   {
     "index": "050",
@@ -393,7 +436,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%201%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%201%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-1.html"
   },
   {
     "index": "050",
@@ -402,7 +446,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%202%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%202%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-2.html"
   },
   {
     "index": "050",
@@ -411,7 +456,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%203%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%203%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-3.html"
   },
   {
     "index": "050",
@@ -420,7 +466,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%204%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%204%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-4.html"
   },
   {
     "index": "050",
@@ -429,7 +476,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%205%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%205%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-5.html"
   },
   {
     "index": "050",
@@ -438,7 +486,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%206%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%206%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-6.html"
   },
   {
     "index": "050",
@@ -447,7 +496,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%207%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20OnBoard%20TSOE%20%28part%207%29_0.zip",
+    "page": "subset-103-onboard-tsoe-part-7.html"
   },
   {
     "index": "050",
@@ -456,7 +506,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%201%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%201%29_0.zip",
+    "page": "subset-103-tsoe-part-1.html"
   },
   {
     "index": "050",
@@ -465,7 +516,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%202%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%202%29_0.zip",
+    "page": "subset-103-tsoe-part-2.html"
   },
   {
     "index": "050",
@@ -474,7 +526,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%203%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%203%29_0.zip",
+    "page": "subset-103-tsoe-part-3.html"
   },
   {
     "index": "050",
@@ -483,7 +536,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%204%29_1.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%204%29_1.zip",
+    "page": "subset-103-tsoe-part-4.html"
   },
   {
     "index": "050",
@@ -492,7 +546,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%205%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%205%29_0.zip",
+    "page": "subset-103-tsoe-part-5.html"
   },
   {
     "index": "050",
@@ -501,7 +556,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%206%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%206%29_0.zip",
+    "page": "subset-103-tsoe-part-6.html"
   },
   {
     "index": "050",
@@ -510,7 +566,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%207%29_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSOE%20%28Part%207%29_0.zip",
+    "page": "subset-103-tsoe-part-7.html"
   },
   {
     "index": "050",
@@ -519,7 +576,8 @@
     "version": "1.0.0",
     "note": "-",
     "type": "ZIP",
-    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSTE_0.zip"
+    "url": "https://www.era.europa.eu/system/files/2023-06/Index050%20-%20SUBSET-103%20TSTE_0.zip",
+    "page": "subset-103-tste.html"
   },
   {
     "index": "52",
@@ -528,7 +586,8 @@
     "version": "3.2.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index052_-_subset-058_v320.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index052_-_subset-058_v320.pdf",
+    "page": "subset-058.html"
   },
   {
     "index": "60",
@@ -537,7 +596,8 @@
     "version": "3.3.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index060_-_subset-104_v330.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index060_-_subset-104_v330.pdf",
+    "page": "subset-104.html"
   },
   {
     "index": "63",
@@ -546,7 +606,8 @@
     "version": "3.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf",
+    "page": "subset-098.html"
   },
   {
     "index": "64",
@@ -555,7 +616,8 @@
     "version": "2.3.0",
     "note": "Note 2",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index064_-_en_301515_v230.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index064_-_en_301515_v230.pdf",
+    "page": "en-301-515.html"
   },
   {
     "index": "65",
@@ -564,7 +626,8 @@
     "version": "3.0.0",
     "note": "Note 3",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index065_-_ts102281_v300.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index065_-_ts102281_v300.pdf",
+    "page": "ts-102-281.html"
   },
   {
     "index": "66",
@@ -573,7 +636,8 @@
     "version": "1.1.1",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index066_-_ts103169_v111.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index066_-_ts103169_v111.pdf",
+    "page": "ts-103-169.html"
   },
   {
     "index": "67",
@@ -582,7 +646,8 @@
     "version": "5.0",
     "note": "Note 10",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index067_-_morane_p38t9001_v50.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index067_-_morane_p38t9001_v50.pdf",
+    "page": "morane-p-38-t-9001.html"
   },
   {
     "index": "68",
@@ -591,7 +656,8 @@
     "version": "1.3.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index068_-_ts102610_v130.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index068_-_ts102610_v130.pdf",
+    "page": "etsi-ts-102-610.html"
   },
   {
     "index": "69",
@@ -600,7 +666,8 @@
     "version": "5.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index069_-_morane_f10t6002_v50.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index069_-_morane_f10t6002_v50.pdf",
+    "page": "morane-f-10-t-6002.html"
   },
   {
     "index": "70",
@@ -609,7 +676,8 @@
     "version": "5.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index070_-_morane_f12t6002_v50.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index070_-_morane_f12t6002_v50.pdf",
+    "page": "morane-f-12-t-6002.html"
   },
   {
     "index": "71",
@@ -618,7 +686,8 @@
     "version": "4.1",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index071_-_morane_e10t6001_v41.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index071_-_morane_e10t6001_v41.pdf",
+    "page": "morane-e-10-t-6001.html"
   },
   {
     "index": "72",
@@ -627,7 +696,8 @@
     "version": "5.1",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index072_-_morane_e12t6001_v51.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index072_-_morane_e12t6001_v51.pdf",
+    "page": "morane-e-12-t-6001.html"
   },
   {
     "index": "73",
@@ -636,7 +706,8 @@
     "version": "4",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index073_-_morane_f10t6001_v4.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index073_-_morane_f10t6001_v4.pdf",
+    "page": "morane-f-10-t-6001.html"
   },
   {
     "index": "74",
@@ -645,7 +716,8 @@
     "version": "3",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index074_-_morane_f12t6001_v3.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index074_-_morane_f12t6001_v3.pdf",
+    "page": "morane-f-12-t-6001.html"
   },
   {
     "index": "75",
@@ -654,7 +726,8 @@
     "version": "4",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index075_-_morane_f10t6003_v4.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index075_-_morane_f10t6003_v4.pdf",
+    "page": "morane-f-10-t-6003.html"
   },
   {
     "index": "76",
@@ -663,7 +736,8 @@
     "version": "4",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index076_-_morane_f12t6003_v4.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index076_-_morane_f12t6003_v4.pdf",
+    "page": "morane-f-12-t-6003.html"
   },
   {
     "index": "77",
@@ -672,7 +746,8 @@
     "version": "4.0",
     "note": "Note 7",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index077_-_era_ertms_033281_v40.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index077_-_era_ertms_033281_v40.pdf",
+    "page": "era-ertms-033281.html"
   },
   {
     "index": "79",
@@ -681,7 +756,8 @@
     "version": "1.1.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index079_-_subset-114_v110.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index079_-_subset-114_v110.pdf",
+    "page": "subset-114.html"
   },
   {
     "index": "81",
@@ -690,7 +766,8 @@
     "version": "-",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index81_reserved_document.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index81_reserved_document.pdf",
+    "page": "reserved-2.html"
   },
   {
     "index": "82",
@@ -699,7 +776,8 @@
     "version": "-",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index82_reserved_document.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index82_reserved_document.pdf",
+    "page": "reserved-3.html"
   },
   {
     "index": "83",
@@ -708,6 +786,7 @@
     "version": "1.0.0",
     "note": "-",
     "type": "PDF",
-    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index083_-_subset-137_v100.pdf"
+    "url": "https://www.era.europa.eu/system/files/2023-01/sos3_index083_-_subset-137_v100.pdf",
+    "page": "subset-137.html"
   }
 ]

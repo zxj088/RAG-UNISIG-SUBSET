@@ -6,7 +6,7 @@ const escapeHtml = value => String(value)
 
 const documents = JSON.parse(fs.readFileSync('era-documents.json', 'utf8'));
 const rows = documents.map(document =>
-  `        <a class="doc-row" href="${escapeHtml(document.url)}" target="_blank" rel="noopener" data-search="${escapeHtml(`${document.index} ${document.reference} ${document.title} ${document.version} ${document.type}`.toLowerCase())}"><span class="doc-index">${escapeHtml(document.index)}</span><span class="doc-ref">${escapeHtml(document.reference)}</span><span class="doc-title">${escapeHtml(document.title)}</span><span class="doc-version">${escapeHtml(document.version)}</span><span class="doc-type">${escapeHtml(document.type)} ↗</span></a>`
+  `        <a class="doc-row" href="${escapeHtml(document.page || document.url)}" data-search="${escapeHtml(`${document.index} ${document.reference} ${document.title} ${document.version} ${document.type}`.toLowerCase())}"><span class="doc-index">${escapeHtml(document.index)}</span><span class="doc-ref">${escapeHtml(document.reference)}</span><span class="doc-title">${escapeHtml(document.title)}</span><span class="doc-version">${escapeHtml(document.version)}</span><span class="doc-type">${escapeHtml(document.type)} →</span></a>`
 ).join('\n');
 
 const path = 'index.html';
