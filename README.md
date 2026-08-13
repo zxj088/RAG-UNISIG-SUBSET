@@ -35,6 +35,8 @@ node tests\subset-098-retrieval.test.js
 
 The suite verifies required clauses and pages for ten representative questions, including SAI header structure, network definitions, connection establishment, key management, and error handling.
 
+The corresponding Microsoft Copilot generation baseline is recorded in `tests/COPILOT_ACCEPTANCE.md`.
+
 The prototype is a retrieval aid, not an engineering authority. Verify all results against the official ERA document.
 
 > The included records are illustrative sample data and are not an authoritative UNISIG specification source.
