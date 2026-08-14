@@ -18,9 +18,9 @@ def render_page(payload: dict, title: str, intro: str, chunks: list[dict], links
 <p class="citation"><strong>Citation:</strong> {document} v{version}, clause {html.escape(clause)}, PDF p.{page}</p>
 <p>{html.escape(chunk["text"])}</p></article>''')
     return f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)}</title><meta name="robots" content="index,follow,max-snippet:-1"><link rel="stylesheet" href="styles.css">
+<title>{html.escape(title)}</title><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><link rel="stylesheet" href="styles.css">
 <style>.corpus-shell{{max-width:980px;margin:0 auto;padding:48px 24px 80px}}.corpus-warning{{border-left:4px solid #d38b00;padding:14px 16px;background:#fff7df}}.corpus-links{{display:grid;gap:10px;margin:28px 0}}.evidence-chunk{{padding:22px 0;border-top:1px solid #dfe5e8}}.evidence-chunk h2{{font-size:1.15rem;margin:0 0 8px}}.evidence-chunk p{{line-height:1.65}}.citation{{color:#52666d}}</style></head>
-<body><header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a><nav><a href="subset-098-corpus.html">Evidence hub</a></nav></header>
+<body><header class="topbar"><a class="brand" href="./">Rail Specifications Evidence Search</a><nav><a href="subset-098-corpus.html">Evidence hub</a></nav></header>
 <main class="corpus-shell"><div class="eyebrow"><span></span> Machine-readable evidence</div><h1>{html.escape(title)}</h1><p>{html.escape(intro)}</p>
 <p class="corpus-warning"><strong>Verification notice:</strong> Automatically extracted search evidence. Verify engineering decisions against the <a href="{source_url}">official ERA-hosted PDF</a>.</p>{links}
 <section aria-label="Extracted clause evidence">{''.join(sections)}</section></main></body></html>'''

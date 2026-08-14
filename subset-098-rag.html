@@ -3,43 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SUBSET-098 Evidence Assistant</title>
+  <meta name="description" content="Search SUBSET-098 v3.0.0 evidence in your browser with verifiable clause and PDF-page citations.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://zxj088.github.io/RAG-UNISIG-SUBSET/subset-098-rag.html">
+  <title>SUBSET-098 Evidence Search</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .rag-shell{max-width:980px;margin:0 auto;padding:48px 24px 80px}.rag-panel{background:#fff;border:1px solid #dfe5e8;border-radius:18px;padding:24px;box-shadow:0 12px 34px rgba(16,38,47,.08)}.rag-panel+ .rag-panel{margin-top:20px}.rag-controls{display:grid;gap:14px}.rag-controls textarea{min-height:110px;resize:vertical;padding:14px;border:1px solid #aebbc1;border-radius:10px;font:inherit}.rag-actions{display:flex;gap:10px;flex-wrap:wrap}.rag-actions button,.file-label{border:0;border-radius:999px;padding:11px 18px;background:#0d5968;color:#fff;font:inherit;font-weight:700;cursor:pointer}.rag-actions button.secondary,.file-label.secondary{background:#e7f0f2;color:#123d47}.file-label input{display:none}.rag-status{color:#52666d;margin:0}.rag-results{display:grid;gap:14px}.rag-result{border:1px solid #dfe5e8;border-radius:14px;padding:18px}.rag-result header{display:flex;justify-content:space-between;gap:12px;align-items:start}.rag-result h3{margin:0;font-size:1rem}.rag-score{font-size:.82rem;color:#61757c}.rag-result p{line-height:1.6}.rag-source{font-size:.9rem;color:#52666d}.rag-source a{color:#0d5968}.rag-warning{border-left:4px solid #d38b00;padding:12px 14px;background:#fff7df}.rag-empty{color:#61757c}.rag-intro{max-width:760px}.rag-intro h1{margin-bottom:12px}.rag-intro p{line-height:1.65}.rag-meta{display:flex;gap:16px;flex-wrap:wrap;color:#52666d;font-size:.9rem}.rag-quality{display:inline-block;padding:4px 8px;border-radius:6px;background:#fff1cc;color:#724c00;font-size:.85rem}details{margin-top:12px}summary{cursor:pointer;color:#315b65}
+    .rag-shell{max-width:980px;margin:0 auto;padding:48px 24px 80px}.rag-panel{background:#fff;border:1px solid #dfe5e8;border-radius:18px;padding:24px;box-shadow:0 12px 34px rgba(16,38,47,.08)}.rag-panel+.rag-panel{margin-top:20px}.rag-controls{display:grid;gap:14px}.rag-controls textarea{width:100%;min-height:110px;resize:vertical;padding:14px;border:1px solid #899ba2;border-radius:10px;font:inherit}.rag-actions,.rag-examples{display:flex;gap:10px;flex-wrap:wrap}.rag-actions button,.rag-examples button{border:0;border-radius:999px;padding:11px 18px;background:#0d5968;color:#fff;font:inherit;font-weight:700;cursor:pointer}.rag-actions button.secondary,.rag-examples button{background:#e7f0f2;color:#123d47}.rag-actions button:disabled{opacity:.55;cursor:not-allowed}.rag-status{color:#52666d;margin:0}.rag-results{display:grid;gap:14px}.rag-result{border:1px solid #dfe5e8;border-radius:14px;padding:18px}.rag-result.context{background:#f7f9f8}.rag-result header{display:flex;justify-content:space-between;gap:12px;align-items:start}.rag-result h3{margin:0;font-size:1rem}.rag-kind{font-size:.78rem;color:#405960;white-space:nowrap}.rag-result p{line-height:1.6}.rag-source{font-size:.9rem;color:#52666d}.rag-source a{color:#0d5968}.rag-warning{border-left:4px solid #d38b00;padding:12px 14px;background:#fff7df}.rag-empty{color:#61757c}.rag-intro{max-width:780px}.rag-intro h1{font-size:clamp(48px,8vw,88px);margin-bottom:12px}.rag-intro p{line-height:1.65}.rag-meta{display:flex;gap:16px;flex-wrap:wrap;color:#52666d;font-size:.9rem}.rag-quality{display:inline-block;padding:4px 8px;border-radius:6px;background:#fff1cc;color:#724c00;font-size:.85rem}details{margin-top:12px}summary{cursor:pointer;color:#315b65}.rag-section-title{margin:12px 0 0;font-size:1.05rem}.citation-copy{margin-left:8px;border:1px solid #aebbc1;background:white;border-radius:6px;padding:4px 7px;cursor:pointer}
   </style>
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a><nav><a href="subset-098.html">SUBSET-098 catalogue page</a></nav></header>
-  <main class="rag-shell">
-    <section class="rag-intro">
-      <div class="eyebrow"><span></span> Browser-based evidence assistant</div>
-      <h1>Ask SUBSET-098</h1>
-      <p>Ask an English question. The published SUBSET-098 evidence loads automatically, and the assistant retrieves and organises it entirely in this browser. It uses no AI model, external API or server.</p>
-      <p class="rag-warning"><strong>Safety notice:</strong> Results are search aids, not authoritative engineering conclusions. Verify every answer against the official ERA document.</p>
-    </section>
-
-    <section class="rag-panel rag-controls">
-      <div class="rag-actions"><button id="retry" class="secondary" type="button" hidden>Retry evidence loading</button></div>
-      <p id="status" class="rag-status">Loading published evidence…</p>
-      <label for="question"><strong>Question</strong></label>
-      <textarea id="question" placeholder="Example: How is the SAI header structured for safe data transfer?"></textarea>
-      <div class="rag-actions">
-        <button id="search" type="button" disabled>Retrieve evidence</button>
-      </div>
-    </section>
-
-    <section class="rag-panel">
-      <h2>Evidence answer</h2>
-      <div id="answer"><p class="rag-empty">Published evidence is loading.</p></div>
-    </section>
-
-    <section class="rag-panel">
-      <h2>Retrieved evidence</h2>
-      <div id="results" class="rag-results"><p class="rag-empty">Published evidence is loading.</p></div>
-    </section>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><a class="brand" href="./">Rail Specifications Evidence Search</a><nav><a href="./#documents">Documents</a><a href="subset-098.html">SUBSET-098</a><a href="legal.html">Sources &amp; reuse</a></nav></header>
+  <main class="rag-shell" id="main">
+    <section class="rag-intro"><div class="eyebrow"><span></span> Browser-based deterministic retrieval</div><h1>Search SUBSET-098</h1><p>Ask an English question or enter an exact clause number. Published evidence loads automatically and is ranked entirely in this browser—without an AI model, account, external API or server.</p><p class="rag-warning"><strong>Safety notice:</strong> Results are navigation aids, not authoritative engineering conclusions. Verify wording, tables, figures and context in the ERA-hosted source PDF.</p></section>
+    <section class="rag-panel rag-controls" aria-labelledby="question-label"><p id="status" class="rag-status" role="status" aria-live="polite">Loading published evidence…</p><label id="question-label" for="question"><strong>Question or clause</strong></label><textarea id="question" placeholder="Example: What happens when a TCP connection is closed?" aria-describedby="question-help"></textarea><p id="question-help" class="rag-status">Press Ctrl+Enter or Command+Enter to search.</p><div class="rag-examples" aria-label="Example questions"><button type="button" data-question="What happens when a TCP connection is closed?">Closed connection</button><button type="button" data-question="What errors can the SAI report?">SAI errors</button><button type="button" data-question="Clause 4.1.1.1.1">Exact clause</button></div><div class="rag-actions"><button id="search" type="button" disabled>Retrieve evidence</button><button id="clear" class="secondary" type="button">Clear</button><button id="retry" class="secondary" type="button" hidden>Retry loading</button></div></section>
+    <section class="rag-panel" aria-labelledby="answer-title"><h2 id="answer-title">Evidence summary</h2><div id="answer" aria-live="polite"><p class="rag-empty">Published evidence is loading.</p></div></section>
+    <section class="rag-panel" aria-labelledby="results-title"><h2 id="results-title">Retrieved evidence</h2><div id="results" class="rag-results"><p class="rag-empty">Published evidence is loading.</p></div></section>
   </main>
-  <script src="subset-098-retrieval.js?v=3"></script>
-  <script src="subset-098-rag.js?v=7"></script>
-</body>
-</html>
+  <footer><a class="brand" href="./">Rail Specifications Evidence Search</a><p>Independent project. No institutional endorsement.</p><a href="legal.html">Sources &amp; reuse</a></footer>
+  <script src="subset-098-retrieval.js?v=4"></script><script src="subset-098-rag.js?v=8"></script>
+</body></html>

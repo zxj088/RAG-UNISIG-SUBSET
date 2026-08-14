@@ -3,8 +3,13 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const {composeAnswer, retrieve} = require('../subset-098-retrieval.js');
 const indexPath = process.env.RAG_INDEX_PATH || path.resolve(__dirname, '../local-data/subset-098-v300-index.json');
-if (!fs.existsSync(indexPath)) throw new Error(`Local index missing: ${indexPath}`);
-const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+function publishedEvidenceIndex() {
+  const markup = fs.readFileSync(path.resolve(__dirname, '../evidence-subset-098.html'), 'utf8');
+  const chunks = [...markup.matchAll(/<article id="([^"]+)"><h2>Clause ([^<]+)<\/h2><p><strong>Citation:<\/strong> SUBSET-098 v([^,]+), clause ([^,]+), PDF p\.(\d+)<\/p><p>([\s\S]*?)<\/p><\/article>/g)].map(match => ({id:match[1], clause:match[4] === 'Unnumbered content' ? null : match[4], page:Number(match[5]), pdfPage:Number(match[5]), title:match[2], text:match[6].replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&quot;','"').replaceAll('&#039;',"'")}));
+  if (!chunks.length) throw new Error('Published evidence could not be parsed');
+  return {schemaVersion:1, document:'SUBSET-098', title:'RBC-RBC Safe Communication Interface', version:'3.0.0', sourceUrl:'https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf', pageCount:109, chunks};
+}
+const index = fs.existsSync(indexPath) ? JSON.parse(fs.readFileSync(indexPath, 'utf8')) : publishedEvidenceIndex();
 const cases = [
   {name:'complete SAI header definition',question:'How is the SAI header structured for safe data transfer?',required:['5.4.4.1.5','5.4.4.1.6','5.4.4.1.7','5.4.4.1.8','5.4.4.1.9','5.4.4.1.10','5.4.4.1.11','5.4.4.1.12','5.4.4.1.13','5.4.5.3.4','5.4.9.3.10'],pages:[21,22,24,46]},
   {name:'closed network definition',question:'What is a closed network?',required:['4.1.1.1.1'],pages:[9]},

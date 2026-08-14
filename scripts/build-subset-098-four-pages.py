@@ -15,9 +15,9 @@ def render(payload: dict, filename: str, start: int, end: int) -> str:
 <p class="citation"><strong>Citation:</strong> SUBSET-098 v3.0.0, clause {html.escape(clause)}, PDF p.{page}</p><p>{html.escape(chunk["text"])}</p></article>''')
     source = html.escape(payload["sourceUrl"], quote=True)
     return f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SUBSET-098 v3.0.0 evidence — PDF pages {start}–{end}</title><meta name="robots" content="index,follow,max-snippet:-1"><link rel="canonical" href="https://zxj088.github.io/subset/{filename}"><link rel="stylesheet" href="styles.css">
+<title>SUBSET-098 v3.0.0 evidence — PDF pages {start}–{end}</title><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><link rel="canonical" href="https://zxj088.github.io/RAG-UNISIG-SUBSET/{filename}"><link rel="stylesheet" href="styles.css">
 <style>.corpus-shell{{max-width:980px;margin:0 auto;padding:48px 24px 80px}}.corpus-warning{{border-left:4px solid #d38b00;padding:14px 16px;background:#fff7df}}.evidence-chunk{{padding:22px 0;border-top:1px solid #dfe5e8}}.evidence-chunk h2{{font-size:1.15rem;margin:0 0 8px}}.evidence-chunk p{{line-height:1.65}}.citation{{color:#52666d}}</style></head><body>
-<header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a></header>
+<header class="topbar"><a class="brand" href="./">Rail Specifications Evidence Search</a></header>
 <main class="corpus-shell"><div class="eyebrow"><span></span> Machine-readable evidence</div><h1>SUBSET-098 v3.0.0</h1><h2>PDF pages {start}–{end}</h2>
 <p>Directly readable evidence for deterministic browser search. No external API or server is required.</p><p class="corpus-warning"><strong>Verification notice:</strong> Automatically extracted search evidence. Verify engineering decisions against the <a href="{source}">official ERA-hosted PDF</a>.</p>
 <section aria-label="Extracted clause evidence">{''.join(evidence)}</section></main></body></html>'''
