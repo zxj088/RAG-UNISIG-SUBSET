@@ -16,7 +16,10 @@
 
   function render(question, results) {
     const direct = results.filter(result => !result.context).slice(0, 6);
-    const context = results.filter(result => result.context).slice(0, 6);
+    const allContext = results.filter(result => result.context);
+    const verifiedBundle = allContext.filter(result => result.contextLabel === 'verified clause bundle');
+    const adjacentContext = allContext.filter(result => result.contextLabel !== 'verified clause bundle');
+    const context = [...verifiedBundle, ...adjacentContext.slice(0, Math.max(0, 8 - verifiedBundle.length))];
     const answer = composeAnswer(index, question, results);
     const matchStrength = answer.confidence === 'High' ? 'Strong lexical match' : answer.confidence === 'Medium' ? 'Moderate lexical match' : 'Limited lexical match';
     els.answer.innerHTML = direct.length ? `<p>Found ${direct.length} direct evidence ${direct.length === 1 ? 'block' : 'blocks'}${context.length ? ` with ${context.length} supporting context ${context.length === 1 ? 'clause' : 'clauses'}` : ''}. No requirement has been inferred beyond the retrieved text.</p><div class="rag-meta"><strong>Query type: ${escapeHtml(answer.intent)}</strong><strong>${matchStrength}</strong></div>` : '<p class="rag-empty">No matching evidence was found. Try an exact clause number or more specific technical terms.</p>';

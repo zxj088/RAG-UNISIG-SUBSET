@@ -16,6 +16,7 @@ const homepage = read('index.html');
 assert(homepage.includes('Rail Specifications Evidence Search') && homepage.includes('subset-098-rag.html') && homepage.includes('legal.html') && homepage.includes('rel="canonical"'));
 const assistant = read('subset-098-rag.html');
 assert(assistant.includes('aria-live="polite"') && read('subset-098-rag.js').includes('Copy citation') && assistant.includes('No institutional endorsement'));
+assert(read('subset-098-rag.js').includes('verifiedBundle'), 'verified clause bundles must not be truncated as ordinary context');
 const sitemap = read('sitemap.xml');
 assert(sitemap.includes('RAG-UNISIG-SUBSET') && !sitemap.includes('evidence-') && !sitemap.includes('corpus'), 'sitemap exposes obsolete or machine pages');
 const rights = JSON.parse(read('rights-policy.json'));
