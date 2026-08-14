@@ -13,7 +13,7 @@
     distribute: ['distributed', 'distribution'], distributed: ['distribute', 'distribution'],
     establish: ['establishment', 'connect', 'connection'], establishment: ['establish', 'connect', 'connection'],
     disconnect: ['disconnection', 'release'], update: ['updated', 'renewal'], updated: ['update', 'renewal'],
-    error: ['failure', 'invalid', 'handling'], errors: ['failure', 'invalid', 'handling']
+    error: ['errors', 'failure', 'invalid', 'handling'], errors: ['error', 'failure', 'invalid', 'handling']
   };
   const BUNDLES = [
     {id: 'subset-098-sai-header', document: 'SUBSET-098', terms: ['sai', 'header'], clauses: /^5\.4\.4\.1\.(?:[2-9]|1[0-3])$|^5\.4\.5\.3\.[45]$|^5\.4\.9\.3\.10$/},

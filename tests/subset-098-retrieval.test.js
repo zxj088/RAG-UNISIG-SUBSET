@@ -21,6 +21,7 @@ const cases = [
   ,{name:'KMAC distribution',question:'How is KMAC distributed?',required:['7.4.7.4.1','7.4.7.4.2','7.4.7.4.3','7.4.7.4.4','7.4.7.4.5'],pages:[107]}
   ,{name:'SAI connection establishment',question:'How is an SAI connection established?',required:['5.4.2.1.3','5.4.5.1.2'],pages:[18,23]}
   ,{name:'SAI error handling',question:'Which errors are covered by SAI error handling?',required:['5.4.10.1.1','5.4.10.1.2','5.4.10.1.3','5.4.10.1.4','5.4.10.1.5','5.4.10.1.6','5.4.10.1.7'],pages:[52,53]}
+  ,{name:'natural plural SAI error query',question:'What errors can the SAI report?',required:['5.4.10.1.1','5.4.10.1.2','5.4.10.1.3','5.4.10.1.4','5.4.10.1.5','5.4.10.1.6','5.4.10.1.7'],pages:[52,53]}
 ];
 let failures = 0;
 for (const testCase of cases) {
