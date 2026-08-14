@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
-  "default": "catalogue-only-pending-review",
+  "default": "searchable-citation-excerpts",
+  "allDocumentsSearchPage": "subset-098-rag.html",
   "searchable": [
     {
       "reference": "SUBSET-098",

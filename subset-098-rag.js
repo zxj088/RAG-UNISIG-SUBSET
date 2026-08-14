@@ -1,78 +1,70 @@
 (() => {
-  const {composeAnswer, normalizeIndex, retrieve} = window.EvidenceAssistant;
-  const els = Object.fromEntries(['status','retry','question','search','clear','results','answer'].map(id => [id, document.querySelector(`#${id}`)]));
-  const EVIDENCE_URL = 'evidence-subset-098.html';
-  const SOURCE_URL = 'https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf';
+  const {search} = window.AllEvidenceSearch;
+  const els = Object.fromEntries(['status','retry','question','search','clear','results','answer','documentFilter'].map(id => [id, document.querySelector(`#${id}`)]));
+  const INDEX_URL = 'all-evidence-index.json';
   const escapeHtml = value => String(value).replace(/[&<>'"]/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[character]));
   let index = null;
 
-  function evidenceCard(result) {
-    const {chunk, context, contextLabel, reasons} = result;
-    const page = chunk.pdfPage || chunk.page;
-    const citation = `${index.document.reference} v${index.document.version}, clause ${chunk.clause || 'Unnumbered content'}, PDF p.${page}`;
-    const quality = chunk.quality && chunk.quality !== 'normal' ? `<span class="rag-quality">Extraction warning: ${escapeHtml(chunk.quality)}</span>` : '';
-    return `<article class="rag-result${context ? ' context' : ''}"><header><h3>${escapeHtml(chunk.clause ? `Clause ${chunk.clause}` : `PDF page ${page}`)}${chunk.title ? ` — ${escapeHtml(chunk.title)}` : ''}</h3><span class="rag-kind">${context ? escapeHtml(contextLabel || 'Supporting context') : 'Direct match'}</span></header><p>${escapeHtml(chunk.text)}</p>${quality}<div class="rag-source">${escapeHtml(citation)} · <a href="${escapeHtml(index.document.sourceUrl || SOURCE_URL)}#page=${page}" target="_blank" rel="noopener">open source PDF at page ${page}</a><button class="citation-copy" type="button" data-citation="${escapeHtml(citation)}">Copy citation</button></div><details><summary>Why this evidence?</summary><p>${escapeHtml((reasons || []).join('; ') || 'Verified adjacent clause context')}</p></details></article>`;
+  function citation(result) {
+    const {record, document} = result;
+    return `${document.reference} v${document.version}, ${record.c ? `clause ${record.c}` : 'unnumbered content'}, PDF p.${record.p}`;
   }
 
   function render(question, results) {
-    const direct = results.filter(result => !result.context).slice(0, 6);
-    const allContext = results.filter(result => result.context);
-    const verifiedBundle = allContext.filter(result => result.contextLabel === 'verified clause bundle');
-    const adjacentContext = allContext.filter(result => result.contextLabel !== 'verified clause bundle');
-    const context = [...verifiedBundle, ...adjacentContext.slice(0, Math.max(0, 8 - verifiedBundle.length))];
-    const answer = composeAnswer(index, question, results);
-    const matchStrength = answer.confidence === 'High' ? 'Strong lexical match' : answer.confidence === 'Medium' ? 'Moderate lexical match' : 'Limited lexical match';
-    els.answer.innerHTML = direct.length ? `<p>Found ${direct.length} direct evidence ${direct.length === 1 ? 'block' : 'blocks'}${context.length ? ` with ${context.length} supporting context ${context.length === 1 ? 'clause' : 'clauses'}` : ''}. No requirement has been inferred beyond the retrieved text.</p><div class="rag-meta"><strong>Query type: ${escapeHtml(answer.intent)}</strong><strong>${matchStrength}</strong></div>` : '<p class="rag-empty">No matching evidence was found. Try an exact clause number or more specific technical terms.</p>';
-    els.results.innerHTML = direct.length ? `<h3 class="rag-section-title">Direct evidence</h3>${direct.map(evidenceCard).join('')}${context.length ? `<h3 class="rag-section-title">Supporting clause context</h3>${context.map(evidenceCard).join('')}` : ''}` : '<p class="rag-empty">No matching evidence found.</p>';
-  }
-
-  function parseEvidence(markup) {
-    const page = new DOMParser().parseFromString(markup, 'text/html');
-    const blocks = [...page.querySelectorAll('article')].map(article => {
-      const heading = article.querySelector('h2')?.textContent.trim() || '';
-      const paragraphs = article.querySelectorAll('p');
-      const citation = paragraphs[0]?.textContent.trim() || '';
-      const text = paragraphs[1]?.textContent.trim() || '';
-      const match = citation.match(/^Citation:\s+SUBSET-098\s+v([^,]+),\s+clause\s+(.+),\s+PDF p\.(\d+)$/i);
-      if (!match || !text) return null;
-      return {id: article.id, clause: match[2] === 'Unnumbered content' ? null : match[2], pdfPage: Number(match[3]), title: heading.replace(/^Clause\s+[^—]+—\s*/, '').trim(), text, quality: 'normal', qualityFlags: []};
-    }).filter(Boolean);
-    if (!blocks.length) throw new Error('No evidence blocks were found');
-    return normalizeIndex({schemaVersion: 2, document: {id:'subset-098-v300', reference:'SUBSET-098', title:'RBC-RBC Safe Communication Interface', version:'3.0.0', sourceUrl:SOURCE_URL}, pageCount:109, blockCount:blocks.length, blocks});
+    const documentCount = new Set(results.map(result => result.record.d)).size;
+    els.answer.innerHTML = results.length ? `<p>Found ${results.length} ranked evidence ${results.length === 1 ? 'excerpt' : 'excerpts'} across ${documentCount} ${documentCount === 1 ? 'document' : 'documents'}. No clause or conclusion has been generated beyond the indexed source text.</p><div class="rag-meta"><strong>Deterministic term and clause matching</strong><strong>Verify every source citation</strong></div>` : '<p class="rag-empty">No matching evidence was found. Try a document reference, exact clause number or more specific technical terms.</p>';
+    els.results.innerHTML = results.length ? results.map(result => {
+      const {record, document} = result;
+      const label = record.c ? `Clause ${record.c}` : `PDF page ${record.p}`;
+      const cite = citation(result);
+      return `<article class="rag-result"><header><h3>${escapeHtml(document.reference)} · ${escapeHtml(label)}${record.t ? ` — ${escapeHtml(record.t)}` : ''}</h3><span class="rag-kind">Ranked match</span></header><p>${escapeHtml(record.e)}</p>${record.e.length >= 520 ? '<p class="rag-quality">Excerpt truncated — inspect the source for the complete text.</p>' : ''}<div class="rag-source">${escapeHtml(cite)} · <a href="${escapeHtml(document.sourceUrl)}#page=${record.p}" target="_blank" rel="noopener">open source PDF at page ${record.p}</a><button class="citation-copy" type="button" data-citation="${escapeHtml(cite)}">Copy citation</button></div><details><summary>Why this evidence?</summary><p>Matched the question against the document reference, title, clause, extracted text and indexed technical terms.</p></details></article>`;
+    }).join('') : '<p class="rag-empty">No matching evidence found.</p>';
   }
 
   function runSearch() {
     const question = els.question.value.trim();
-    if (!index) { els.status.textContent = 'Published evidence is not ready.'; return; }
-    if (!question) { els.status.textContent = 'Enter a question or clause first.'; els.question.focus(); return; }
-    render(question, retrieve(index, question));
-    const url = new URL(location.href); url.searchParams.set('q', question); history.replaceState(null, '', url);
-    document.querySelector('#answer-title').scrollIntoView({behavior:'smooth', block:'start'});
+    if (!index) { els.status.textContent = 'The published evidence index is not ready.'; return; }
+    if (!question) { els.status.textContent = 'Enter a question, document reference or clause first.'; els.question.focus(); return; }
+    const selectedDocument = els.documentFilter.value === '' ? null : index.documents[Number(els.documentFilter.value)];
+    if (selectedDocument && selectedDocument.blocks === 0) {
+      els.answer.innerHTML = `<p>This reserved catalogue source contains no extractable evidence blocks. No clause evidence has been created for it.</p>`;
+      els.results.innerHTML = `<p class="rag-empty"><a href="${escapeHtml(selectedDocument.sourceUrl)}" target="_blank" rel="noopener">Open the ERA-hosted source metadata PDF</a>.</p>`;
+      return;
+    }
+    const results = search(index, question, els.documentFilter.value);
+    render(question, results);
+    const url = new URL(location.href); url.searchParams.set('q', question); if (els.documentFilter.value) url.searchParams.set('d', els.documentFilter.value); else url.searchParams.delete('d'); history.replaceState(null,'',url);
+    document.querySelector('#answer-title').scrollIntoView({behavior:'smooth',block:'start'});
   }
 
-  async function loadEvidence() {
-    els.search.disabled = true; els.retry.hidden = true; els.status.textContent = 'Loading published evidence…';
+  async function loadIndex() {
+    els.search.disabled = true; els.retry.hidden = true; els.status.textContent = 'Loading the complete published evidence index…';
     try {
-      const response = await fetch(EVIDENCE_URL, {cache:'no-cache'});
+      const response = await fetch(INDEX_URL, {cache:'no-cache'});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      index = parseEvidence(await response.text());
+      index = await response.json();
+      els.documentFilter.innerHTML = '<option value="">All indexed documents</option>' + index.documents.map((document, position) => `<option value="${position}">${escapeHtml(document.reference)} v${escapeHtml(document.version)} — ${escapeHtml(document.title || '')}${document.blocks ? '' : ' (source metadata only)'}</option>`).join('');
+      const params = new URL(location.href).searchParams;
+      const requestedReference = params.get('document');
+      const requestedPosition = params.get('d');
+      if (requestedPosition && index.documents[Number(requestedPosition)]) els.documentFilter.value = requestedPosition;
+      else if (requestedReference) { const position=index.documents.findIndex(document=>document.reference.toLowerCase()===requestedReference.toLowerCase()); if(position>=0) els.documentFilter.value=String(position); }
       els.search.disabled = false;
-      els.status.textContent = `Ready: ${index.chunks.length} evidence blocks · SUBSET-098 v3.0.0 · 109 PDF pages.`;
-      els.answer.innerHTML = '<p class="rag-empty">Enter an English question or exact clause number.</p>';
+      els.status.textContent = `Ready: ${index.blockCount.toLocaleString()} evidence blocks · 84 searchable sources · 3 reserved metadata-only sources.`;
+      els.answer.innerHTML = '<p class="rag-empty">Enter an English question, document reference or exact clause number.</p>';
       els.results.innerHTML = '<p class="rag-empty">No search has been run yet.</p>';
-      const initial = new URL(location.href).searchParams.get('q');
-      if (initial) { els.question.value = initial; runSearch(); }
+      const initial = params.get('q'); if (initial) { els.question.value=initial; runSearch(); }
     } catch (error) {
-      index = null; els.retry.hidden = false; els.status.textContent = `Could not load published evidence: ${error.message}.`;
-      els.answer.innerHTML = '<p class="rag-empty">Evidence is unavailable. Retry loading or use the ERA source link on the SUBSET-098 catalogue page.</p>';
+      index = null; els.retry.hidden=false; els.status.textContent=`Could not load the published evidence index: ${error.message}.`; els.answer.innerHTML='<p class="rag-empty">Evidence is unavailable. Retry loading.</p>';
     }
   }
 
-  els.search.addEventListener('click', runSearch);
-  els.retry.addEventListener('click', loadEvidence);
-  els.clear.addEventListener('click', () => { els.question.value=''; history.replaceState(null,'',location.pathname); els.answer.innerHTML='<p class="rag-empty">Enter an English question or exact clause number.</p>'; els.results.innerHTML='<p class="rag-empty">No search has been run yet.</p>'; els.question.focus(); });
-  els.question.addEventListener('keydown', event => { if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) runSearch(); });
-  document.querySelectorAll('[data-question]').forEach(button => button.addEventListener('click', () => { els.question.value = button.dataset.question; runSearch(); }));
-  els.results.addEventListener('click', async event => { const button = event.target.closest('[data-citation]'); if (!button) return; try { await navigator.clipboard.writeText(button.dataset.citation); button.textContent='Copied'; setTimeout(() => { button.textContent='Copy citation'; }, 1500); } catch { button.textContent='Copy manually'; } });
-  loadEvidence();
+  els.search.addEventListener('click',runSearch);
+  els.retry.addEventListener('click',loadIndex);
+  els.documentFilter.addEventListener('change',()=>{if(els.question.value.trim())runSearch();});
+  els.clear.addEventListener('click',()=>{els.question.value='';els.documentFilter.value='';history.replaceState(null,'',location.pathname);els.answer.innerHTML='<p class="rag-empty">Enter an English question, document reference or exact clause number.</p>';els.results.innerHTML='<p class="rag-empty">No search has been run yet.</p>';els.question.focus();});
+  els.question.addEventListener('keydown',event=>{if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))runSearch();});
+  document.querySelectorAll('[data-question]').forEach(button=>button.addEventListener('click',()=>{els.question.value=button.dataset.question;runSearch();}));
+  els.results.addEventListener('click',async event=>{const button=event.target.closest('[data-citation]');if(!button)return;try{await navigator.clipboard.writeText(button.dataset.citation);button.textContent='Copied';setTimeout(()=>{button.textContent='Copy citation';},1500);}catch{button.textContent='Copy manually';}});
+  loadIndex();
 })();

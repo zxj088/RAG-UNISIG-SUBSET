@@ -11,9 +11,10 @@
     const visible = documents.filter(document => `${document.index} ${document.reference} ${document.title} ${document.version} ${document.type}`.toLowerCase().includes(query));
     count.textContent = `${visible.length} ${visible.length === 1 ? 'entry' : 'entries'}`;
     list.innerHTML = visible.length ? visible.map(document => {
-      const searchPage = searchable.get(`${document.reference}|${document.version}`);
+      const isReserved = document.reference === 'Reserved';
+      const searchPage = isReserved ? '' : `subset-098-rag.html?q=${encodeURIComponent(document.reference)}`;
       const href = searchPage || document.page || document.url;
-      const availability = searchPage ? '<span class="availability searchable">Search evidence</span>' : '<span class="availability">Catalogue only</span>';
+      const availability = isReserved ? '<span class="availability">Source metadata only</span>' : '<span class="availability searchable">Search evidence</span>';
       return `<a class="doc-row" href="${escapeHtml(href)}"><span class="doc-index">${escapeHtml(document.index)}</span><span class="doc-ref">${escapeHtml(document.reference)}</span><span class="doc-title">${escapeHtml(document.title)}</span><span class="doc-version">${escapeHtml(document.version)}</span><span class="doc-type">${escapeHtml(document.type)}</span>${availability}</a>`;
     }).join('') : '<p class="empty-docs">No catalogue entries match this search.</p>';
   }
@@ -21,6 +22,6 @@
   search.addEventListener('input', render);
   Promise.all([fetch('era-documents.json', {cache:'no-cache'}), fetch('rights-policy.json', {cache:'no-cache'})])
     .then(async ([documentsResponse, rightsResponse]) => { if (!documentsResponse.ok || !rightsResponse.ok) throw new Error('Catalogue unavailable'); return [await documentsResponse.json(), await rightsResponse.json()]; })
-    .then(([data, rights]) => { documents = data; searchable = new Map(rights.searchable.map(item => [`${item.reference}|${item.version}`, item.searchPage || 'subset-098-rag.html'])); render(); })
+    .then(([data]) => { documents = data; render(); })
     .catch(() => { count.textContent = 'Unavailable'; list.innerHTML = '<p class="empty-docs">The catalogue could not be loaded. Use the ERA archive link above.</p>'; });
 })();

@@ -30,7 +30,7 @@
       <h1>Ask a question.<br>Find the evidence.</h1>
       <p>New to the specifications? Start with a plain-English question. Every result points back to a document, version, clause and PDF page so you can verify it yourself.</p>
       <form class="home-search" id="homeSearch" action="subset-098-rag.html" method="get">
-        <label for="homeQuestion">Try the currently searchable document: SUBSET-098</label>
+        <label for="homeQuestion">Search evidence across all indexed documents</label>
         <div><input id="homeQuestion" name="q" type="search" placeholder="What happens when a TCP connection is closed?" required><button type="submit">Find evidence <span aria-hidden="true">→</span></button></div>
       </form>
       <div class="hero-actions">
@@ -38,20 +38,20 @@
         <a class="text-link" href="#documents">Browse all documents</a>
       </div>
       <div class="metrics" aria-label="Current coverage">
-        <div><strong>79</strong><span>catalogue entries</span></div>
-        <div><strong>737</strong><span>searchable evidence blocks</span></div>
-        <div><strong>1</strong><span>searchable document</span></div>
+        <div><strong>84 + 3</strong><span>searchable + reserved sources</span></div>
+        <div><strong>20,049</strong><span>searchable evidence blocks</span></div>
+        <div><strong>8,258</strong><span>cited PDF pages</span></div>
       </div>
     </section>
 
     <section class="scope-panel" id="scope" aria-labelledby="scope-title">
       <div><span class="section-no">01</span><h2 id="scope-title">How to use this site.</h2></div>
       <div class="scope-grid">
-        <article><span class="step-number">1</span><h3>Ask</h3><p>Enter an English question or exact clause number. SUBSET-098 is searchable now and loads automatically.</p></article>
+        <article><span class="step-number">1</span><h3>Ask</h3><p>Enter an English question, document reference or exact clause number. All published evidence indexes load automatically.</p></article>
         <article><span class="step-number">2</span><h3>Review</h3><p>Read direct evidence separately from supporting clause context. The site does not invent or silently paraphrase requirements.</p></article>
         <article><span class="step-number">3</span><h3>Verify</h3><p>Open the cited ERA-hosted PDF page and confirm wording, tables, figures and surrounding clauses.</p></article>
       </div>
-      <p class="coverage-note"><strong>Why only one searchable document?</strong> The archive contains material from different rightsholders and extraction quality varies. A document becomes searchable only after its source, version, reuse status and clause/page mapping pass review. Catalogue-only documents still link to the authoritative ERA source.</p>
+      <p class="coverage-note"><strong>Coverage:</strong> Search spans 20,049 evidence blocks from 84 evidence-bearing sources. Three additional reserved entries contain no extractable clauses and are identified as source metadata only. For third-party or rights-sensitive material, results provide bounded excerpts and citations rather than complete documents.</p>
     </section>
 
     <section class="documents" id="documents">
@@ -73,6 +73,6 @@
     </section>
   </main>
   <footer><a class="brand" href="./">Rail Specifications Evidence Search</a><p>Independent project. Not affiliated with or endorsed by ERA, the European Union, UNISIG, ETSI or UIC.</p><a href="legal.html">Sources &amp; reuse</a></footer>
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>

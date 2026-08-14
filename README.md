@@ -4,7 +4,7 @@ An independent, non-commercial, English-language evidence search tool for public
 
 Production site: https://zxj088.github.io/RAG-UNISIG-SUBSET/
 
-The wider archive is catalogue metadata only until each document's reuse status and extraction quality are reviewed. Current searchable scope is SUBSET-098 v3.0.0.
+The public same-origin index contains 20,049 evidence blocks from 84 evidence-bearing PDF sources. Three additional reserved entries contain no extractable clauses and remain source metadata only. Questions can search every evidence-bearing source automatically; no local file or OneDrive connection is required at runtime.
 
 The catalogue covers the 79 entries in ERA's archived Set of Specifications 3 (ETCS B3 R2 / GSM-R B1). Results preserve document, version, clause, PDF-page, and authoritative-source citations.
 
@@ -30,6 +30,7 @@ The retrieval engine accepts both existing schema-v1 indexes and new schema-v2 i
 node tests\evidence-assistant.test.js
 node tests\subset-098-retrieval.test.js
 node tests\production-site.test.js
+node tests\all-documents-search.test.js
 ```
 
 The SUBSET-098 suite verifies ten representative questions covering SAI header structure, network definitions, connection establishment, key management, and error handling.
