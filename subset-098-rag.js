@@ -3,6 +3,13 @@
   const els = Object.fromEntries(['status','retry','question','search','clear','results','answer','documentFilter'].map(id => [id, document.querySelector(`#${id}`)]));
   const INDEX_URL = 'all-evidence-index.json';
   const escapeHtml = value => String(value).replace(/[&<>'"]/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[character]));
+  const QUESTION_STOP = new Set('a an and are as at be by can do does for from how in into is it of on or that the this to what when where which who why with'.split(' '));
+  const questionKeywords = question => [...new Set((String(question).match(/[a-z0-9]+(?:[-'][a-z0-9]+)?/gi) || []).filter(word => !QUESTION_STOP.has(word.toLowerCase()) && word.length > 1))];
+  function highlight(value, keywords) {
+    if (!keywords.length) return escapeHtml(value);
+    const pattern = new RegExp(`(${keywords.sort((a,b)=>b.length-a.length).map(word=>word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')})`, 'gi');
+    return String(value).split(pattern).map(part => keywords.some(word => word.toLowerCase() === part.toLowerCase()) ? `<mark>${escapeHtml(part)}</mark>` : escapeHtml(part)).join('');
+  }
   let index = null;
 
   function citation(result) {
@@ -12,12 +19,13 @@
 
   function render(question, results) {
     const documentCount = new Set(results.map(result => result.record.d)).size;
+    const keywords = questionKeywords(question);
     els.answer.innerHTML = results.length ? `<p>Found ${results.length} ranked evidence ${results.length === 1 ? 'excerpt' : 'excerpts'} across ${documentCount} ${documentCount === 1 ? 'document' : 'documents'}. No clause or conclusion has been generated beyond the indexed source text.</p><div class="rag-meta"><strong>Deterministic term and clause matching</strong><strong>Verify every source citation</strong></div>` : '<p class="rag-empty">No matching evidence was found. Try a document reference, exact clause number or more specific technical terms.</p>';
     els.results.innerHTML = results.length ? results.map(result => {
       const {record, document} = result;
       const label = record.c ? `Clause ${record.c}` : `PDF page ${record.p}`;
       const cite = citation(result);
-      return `<article class="rag-result"><header><h3>${escapeHtml(document.reference)} · ${escapeHtml(label)}${record.t ? ` — ${escapeHtml(record.t)}` : ''}</h3><span class="rag-kind">Ranked match</span></header><p>${escapeHtml(record.e)}</p>${record.e.length >= 520 ? '<p class="rag-quality">Excerpt truncated — inspect the source for the complete text.</p>' : ''}<div class="rag-source">${escapeHtml(cite)} · <a href="${escapeHtml(document.sourceUrl)}#page=${record.p}" target="_blank" rel="noopener">open source PDF at page ${record.p}</a><button class="citation-copy" type="button" data-citation="${escapeHtml(cite)}">Copy citation</button></div><details><summary>Why this evidence?</summary><p>Matched the question against the document reference, title, clause, extracted text and indexed technical terms.</p></details></article>`;
+      return `<article class="rag-result"><header><h3>${highlight(document.reference,keywords)} · ${highlight(label,keywords)}${record.t ? ` — ${highlight(record.t,keywords)}` : ''}</h3><span class="rag-kind">Ranked match</span></header><p>${highlight(record.e,keywords)}</p>${record.e.length >= 520 ? '<p class="rag-quality">Excerpt truncated — inspect the source for the complete text.</p>' : ''}<div class="rag-source">${escapeHtml(cite)} · <a href="${escapeHtml(document.sourceUrl)}#page=${record.p}" target="_blank" rel="noopener">open source PDF at page ${record.p}</a><button class="citation-copy" type="button" data-citation="${escapeHtml(cite)}">Copy citation</button></div><details><summary>Why this evidence?</summary><p>Matched question keywords: ${keywords.length ? keywords.map(escapeHtml).join(', ') : 'exact indexed terms'}.</p></details></article>`;
     }).join('') : '<p class="rag-empty">No matching evidence found.</p>';
   }
 

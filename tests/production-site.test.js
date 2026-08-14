@@ -20,6 +20,7 @@ assert(read('app.js').includes('Search evidence'), 'catalogue must link every do
 const assistant = read('subset-098-rag.html');
 assert(assistant.includes('aria-live="polite"') && read('subset-098-rag.js').includes('Copy citation') && assistant.includes('No institutional endorsement'));
 assert(read('subset-098-rag.js').includes('all-evidence-index.json'), 'assistant must load the complete same-origin public index');
+assert(read('subset-098-rag.js').includes('<mark>') && assistant.includes('.rag-result mark'), 'question keywords must be highlighted safely in results');
 const sitemap = read('sitemap.xml');
 assert(sitemap.includes('RAG-UNISIG-SUBSET') && !sitemap.includes('evidence-') && !sitemap.includes('corpus'), 'sitemap exposes obsolete or machine pages');
 const rights = JSON.parse(read('rights-policy.json'));
