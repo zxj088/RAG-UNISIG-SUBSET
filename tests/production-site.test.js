@@ -5,6 +5,7 @@ const read = file => fs.readFileSync(file, 'utf8');
 const allPublicText = [...htmlFiles, 'robots.txt', 'sitemap.xml', 'app.js', 'styles.css'].map(read).join('\n');
 assert(!allPublicText.includes('zxj088.github.io/subset'), 'obsolete Pages URL remains');
 assert(!allPublicText.includes('github.com/zxj088/subset'), 'obsolete repository URL remains');
+assert(!allPublicText.includes('github.com/') && !allPublicText.includes('GitHub'), 'repository hosting must not be shown on the public site');
 assert(!allPublicText.includes('brand-mark">U'), 'logo-like U mark remains');
 assert(!read('styles.css').includes('.brand-mark{'), 'legacy logo CSS remains');
 assert(!allPublicText.includes('fonts.googleapis.com'), 'runtime Google Fonts dependency remains');
