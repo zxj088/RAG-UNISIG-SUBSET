@@ -1,42 +1,34 @@
-# UNISIG Subset Explorer
+# UNISIG Evidence Assistant
 
-A lightweight, static web interface for filtering, selecting, and exporting focused working sets of UNISIG requirements.
+An independent, non-commercial, English-language evidence search tool for publicly accessible railway specifications. It runs as a static GitHub Pages site and uses deterministic browser-side retrieval: no AI model, paid API, server, company resource, SharePoint, Microsoft 365, or Copilot is required.
 
-The site includes a searchable catalogue of all 79 files in ERA's archived Set of Specifications 3 (ETCS B3 R2 / GSM-R B1). Downloads link to the authoritative ERA-hosted files so revisions, attribution, and third-party publication rights remain with their source.
+The catalogue covers the 79 entries in ERA's archived Set of Specifications 3 (ETCS B3 R2 / GSM-R B1). Results preserve document, version, clause, PDF-page, and authoritative-source citations.
 
 ## Run locally
 
-Open `index.html` in a browser or serve the directory with any static HTTP server.
+Serve the directory with any static HTTP server and open `index.html`. The public `subset-098-rag.html` Evidence Assistant automatically loads its same-origin published evidence; users never select or upload an index. Direct `file://` use is not supported because browsers block same-origin fetches from local files.
 
-## Publishing
+## Build a document index
 
-The project is designed for GitHub Pages and is published from the repository root.
-
-## Local SUBSET-098 retrieval prototype
-
-The repository includes a local-only clause retrieval prototype for SUBSET-098 v3.0.0. The official PDF and generated text index are intentionally excluded from Git.
-
-1. Download the authoritative PDF from the SUBSET-098 catalogue page and save it locally.
-2. Build the index with the bundled Python runtime and `pdfplumber`:
-
-   ```powershell
-   python scripts/build-subset-098-index.py path\to\subset-098-v300.pdf local-data\subset-098-v300-index.json
-   ```
-
-3. Open `subset-098-rag.html` in a browser.
-4. Load `local-data\subset-098-v300-index.json`, enter a question, and retrieve evidence.
-5. Copy the generated grounded prompt into an approved Microsoft Copilot Chat session.
-
-Run the local retrieval regression suite after rebuilding the index or changing ranking logic:
+Official PDFs and generated indexes are intentionally excluded from Git. Build schema-v2 evidence from a local PDF:
 
 ```powershell
+python scripts/build-pdf-index.py path\to\source.pdf local-data\indexes\source-index.json `
+  --document SUBSET-098 --title "RBC-RBC Safe Communication Interface" `
+  --version 3.0.0 --source-url https://www.era.europa.eu/...
+```
+
+The retrieval engine accepts both existing schema-v1 indexes and new schema-v2 indexes. Published evidence is loaded automatically by the site.
+
+## Tests
+
+```powershell
+node tests\evidence-assistant.test.js
 node tests\subset-098-retrieval.test.js
 ```
 
-The suite verifies required clauses and pages for ten representative questions, including SAI header structure, network definitions, connection establishment, key management, and error handling.
+The SUBSET-098 suite verifies ten representative questions covering SAI header structure, network definitions, connection establishment, key management, and error handling.
 
-The corresponding Microsoft Copilot generation baseline is recorded in `tests/COPILOT_ACCEPTANCE.md`.
+## Verification and rights
 
-The prototype is a retrieval aid, not an engineering authority. Verify all results against the official ERA document.
-
-> The included records are illustrative sample data and are not an authoritative UNISIG specification source.
+This project is not an engineering authority. Extracted text may contain processing errors; verify every material result against the authoritative source document. The project is not affiliated with, endorsed by, sponsored by, or maintained by ERA, the European Union, UNISIG, ETSI, or other document owners. Copyright and other rights remain with their respective holders.

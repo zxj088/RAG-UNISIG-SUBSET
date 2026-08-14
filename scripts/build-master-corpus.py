@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 
 
+def unpack(payload: dict) -> tuple[dict, list[dict]]:
+    document = payload["document"] if isinstance(payload.get("document"), dict) else {
+        "reference": payload["document"], "version": payload["version"]
+    }
+    return document, payload.get("blocks", payload.get("chunks", []))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("indexes", type=Path)
@@ -11,14 +18,15 @@ def main() -> None:
     args = parser.parse_args()
     volumes = [{"size": 0, "blocks": [], "documents": set()} for _ in range(4)]
     payloads = [json.loads(path.read_text(encoding="utf-8")) for path in sorted(args.indexes.glob("*-index.json"))]
-    for payload in sorted(payloads, key=lambda item: sum(len(c["text"]) for c in item["chunks"]), reverse=True):
+    for payload in sorted(payloads, key=lambda item: sum(len(c["text"]) for c in unpack(item)[1]), reverse=True):
+        document, chunks = unpack(payload)
         volume = min(volumes, key=lambda item: item["size"])
-        volume["documents"].add(f"{payload['document']} v{payload['version']}")
-        for chunk in payload["chunks"]:
+        volume["documents"].add(f"{document['reference']} v{document['version']}")
+        for chunk in chunks:
             clause = chunk.get("clause") or "Unnumbered content"
-            page = int(chunk["page"])
+            page = int(chunk.get("pdfPage", chunk.get("page")))
             text = html.escape(chunk["text"])
-            volume["blocks"].append(f'<article><h2>{html.escape(payload["document"])} v{html.escape(payload["version"])} — clause {html.escape(clause)}</h2><p><strong>Citation:</strong> {html.escape(payload["document"])} v{html.escape(payload["version"])}, clause {html.escape(clause)}, PDF p.{page}</p><p>{text}</p></article>')
+            volume["blocks"].append(f'<article><h2>{html.escape(document["reference"])} v{html.escape(document["version"])} — clause {html.escape(clause)}</h2><p><strong>Citation:</strong> {html.escape(document["reference"])} v{html.escape(document["version"])}, clause {html.escape(clause)}, PDF p.{page}</p><p>{text}</p></article>')
             volume["size"] += len(chunk["text"])
     for number, volume in enumerate(volumes, start=1):
         filename = f"unisig-corpus-{number}.html"

@@ -1,8 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const {buildPrompt, retrieve} = require('../subset-098-retrieval.js');
-const indexPath = path.resolve(__dirname, '../local-data/subset-098-v300-index.json');
+const {composeAnswer, retrieve} = require('../subset-098-retrieval.js');
+const indexPath = process.env.RAG_INDEX_PATH || path.resolve(__dirname, '../local-data/subset-098-v300-index.json');
 if (!fs.existsSync(indexPath)) throw new Error(`Local index missing: ${indexPath}`);
 const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
 const cases = [
@@ -26,8 +26,13 @@ for (const testCase of cases) {
   const missingPages = testCase.pages.filter(page => !pages.has(page));
   try {
     assert.deepEqual(missingClauses, []); assert.deepEqual(missingPages, []);
-    const prompt = buildPrompt(index, testCase.question, results);
-    assert.match(prompt, /Do not invent requirements/); assert.match(prompt, /Authoritative source:/);
+    const answer = composeAnswer(index, testCase.question, results);
+    assert.notEqual(answer.confidence, 'Insufficient');
+    assert.ok(answer.evidence.length > 0);
+    assert.ok(answer.evidence.every(item => item.document === 'SUBSET-098'));
+    assert.ok(answer.evidence.every(item => item.version === index.version));
+    assert.ok(answer.evidence.every(item => Number.isInteger(item.pdfPage)));
+    assert.ok(answer.evidence.every(item => item.sourceUrl === index.sourceUrl));
     console.log(`PASS ${testCase.name} (${results.length} evidence chunks)`);
   } catch {
     failures += 1; console.error(`FAIL ${testCase.name}`);

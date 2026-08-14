@@ -12,6 +12,10 @@ CLAUSE_RE = re.compile(r"^(\d+(?:\.\d+){1,})\s+(.+)$")
 TOKEN_RE = re.compile(r"[a-z0-9]+(?:[-'][a-z0-9]+)?", re.I)
 
 
+def safe_id(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-") or "document"
+
+
 def clean_lines(text: str, document: str) -> list[str]:
     lines = []
     for raw in text.splitlines():
@@ -78,11 +82,16 @@ def main() -> None:
         flush()
         for sequence, chunk in enumerate(chunks, start=1):
             label = (chunk["clause"] or "page").replace(".", "-")
-            chunk["id"] = f"{args.document.lower()}-{label}-p{chunk['page']}-{sequence}"
-        payload = {"schemaVersion": 1, "document": args.document, "title": args.title,
-                   "version": args.version, "sourceUrl": args.source_url,
+            chunk["pdfPage"] = chunk.pop("page")
+            chunk["id"] = f"{safe_id(args.document)}-{label}-p{chunk['pdfPage']}-{sequence}"
+            chunk["quality"] = "normal"
+            chunk["qualityFlags"] = []
+        document_id = f"{safe_id(args.document)}-v{safe_id(args.version)}"
+        payload = {"schemaVersion": 2,
+                   "document": {"id": document_id, "reference": args.document, "title": args.title,
+                                "version": args.version, "sourceUrl": args.source_url},
                    "generatedAt": datetime.now(timezone.utc).isoformat(), "pageCount": len(pdf.pages),
-                   "chunkCount": len(chunks), "chunks": chunks}
+                   "blockCount": len(chunks), "blocks": chunks}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote {len(chunks)} chunks from {payload['pageCount']} pages to {args.output}")

@@ -29,7 +29,7 @@ def main() -> None:
 <style>.corpus-shell{{max-width:980px;margin:0 auto;padding:48px 24px 80px}}.corpus-warning{{border-left:4px solid #d38b00;padding:14px 16px;background:#fff7df;line-height:1.55}}.evidence-chunk{{padding:22px 0;border-top:1px solid #dfe5e8}}.evidence-chunk h2{{font-size:1.15rem;margin:0 0 8px}}.evidence-chunk p{{line-height:1.65}}.citation{{color:#52666d}}</style></head>
 <body><header class="topbar"><a class="brand" href="./"><span class="brand-mark">U</span><span>UNISIG <b>Subset</b></span></a><nav><a href="subset-098.html">SUBSET-098 catalogue</a></nav></header>
 <main class="corpus-shell"><div class="eyebrow"><span></span> Machine-readable evidence</div><h1>{document} v{version}</h1><h2>{html.escape(payload["title"])}</h2>
-<p>This static page exposes extracted document text directly in HTML so enterprise search and Copilot crawlers can retrieve it without JavaScript or file uploads. Each block carries its document version, clause and PDF-page citation.</p>
+<p>This static page exposes extracted document text directly in HTML for deterministic evidence search. Each block carries its document version, clause and PDF-page citation.</p>
 <p class="corpus-warning"><strong>Verification notice:</strong> This is automatically extracted search evidence, not the authoritative specification. Figures and tables may have imperfect reading order. Verify engineering decisions against the <a href="{source_url}">official ERA-hosted PDF</a>.</p>
 <p><strong>Document:</strong> {document} &nbsp; <strong>Version:</strong> {version} &nbsp; <strong>PDF pages:</strong> {payload["pageCount"]} &nbsp; <strong>Evidence blocks:</strong> {len(sections)}</p>
 <section aria-label="Extracted clause evidence">{''.join(sections)}</section></main>
