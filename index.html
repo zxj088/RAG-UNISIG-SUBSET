@@ -27,11 +27,15 @@
   <main id="main">
     <section class="hero">
       <div class="eyebrow"><span></span> Independent evidence search</div>
-      <h1>Find the clause.<br>Verify the source.</h1>
-      <p>Retrieve specification evidence with document, version, clause and PDF-page citations. Everything runs in your browser—without an AI model, account, external API or server.</p>
+      <h1>Ask a question.<br>Find the evidence.</h1>
+      <p>New to the specifications? Start with a plain-English question. Every result points back to a document, version, clause and PDF page so you can verify it yourself.</p>
+      <form class="home-search" id="homeSearch" action="subset-098-rag.html" method="get">
+        <label for="homeQuestion">Try the currently searchable document: SUBSET-098</label>
+        <div><input id="homeQuestion" name="q" type="search" placeholder="What happens when a TCP connection is closed?" required><button type="submit">Find evidence <span aria-hidden="true">→</span></button></div>
+      </form>
       <div class="hero-actions">
-        <a class="primary" href="subset-098-rag.html">Search SUBSET-098 <span aria-hidden="true">→</span></a>
-        <a class="text-link" href="#scope">Check current coverage</a>
+        <a class="primary" href="subset-098-rag.html">Open evidence search <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="#documents">Browse all documents</a>
       </div>
       <div class="metrics" aria-label="Current coverage">
         <div><strong>79</strong><span>catalogue entries</span></div>
@@ -41,19 +45,20 @@
     </section>
 
     <section class="scope-panel" id="scope" aria-labelledby="scope-title">
-      <div><span class="section-no">01</span><h2 id="scope-title">Clear about its limits.</h2></div>
+      <div><span class="section-no">01</span><h2 id="scope-title">How to use this site.</h2></div>
       <div class="scope-grid">
-        <article><h3>Available now</h3><p>Deterministic English-language evidence retrieval for SUBSET-098 v3.0.0. The index loads automatically from this site.</p></article>
-        <article><h3>Not an engineering conclusion</h3><p>Matches are search aids. Always verify wording and context in the authoritative source PDF before making an engineering or safety decision.</p></article>
-        <article><h3>Privacy by design</h3><p>Your question stays in this browser. There is no account, analytics tracker, company connection or hosted AI service.</p></article>
+        <article><span class="step-number">1</span><h3>Ask</h3><p>Enter an English question or exact clause number. SUBSET-098 is searchable now and loads automatically.</p></article>
+        <article><span class="step-number">2</span><h3>Review</h3><p>Read direct evidence separately from supporting clause context. The site does not invent or silently paraphrase requirements.</p></article>
+        <article><span class="step-number">3</span><h3>Verify</h3><p>Open the cited ERA-hosted PDF page and confirm wording, tables, figures and surrounding clauses.</p></article>
       </div>
+      <p class="coverage-note"><strong>Why only one searchable document?</strong> The archive contains material from different rightsholders and extraction quality varies. A document becomes searchable only after its source, version, reuse status and clause/page mapping pass review. Catalogue-only documents still link to the authoritative ERA source.</p>
     </section>
 
     <section class="documents" id="documents">
       <div class="section-head"><div><span class="section-no">02</span><h2>Source catalogue</h2></div><a class="source-link" href="https://www.era.europa.eu/era-folder/archived-set-specifications-3-etcs-b3-r2-gsm-r-b1">View the ERA archive <span aria-hidden="true">↗</span></a></div>
-      <p class="archive-intro">Catalogue metadata for ERA Set of Specifications 3. Availability here does not imply that third-party material may be republished; authoritative downloads remain hosted by ERA.</p>
+      <p class="archive-intro">Browse the complete catalogue. The availability column distinguishes searchable evidence from catalogue-only source links.</p>
       <label class="doc-search"><span aria-hidden="true">⌕</span><input id="documentSearch" type="search" placeholder="Search reference, title or version" aria-label="Search documents"><b id="documentCount">Loading…</b></label>
-      <div class="doc-header" aria-hidden="true"><span>Index</span><span>Reference</span><span>Document</span><span>Version</span><span>Format</span></div>
+      <div class="doc-header" aria-hidden="true"><span>Index</span><span>Reference</span><span>Document</span><span>Version</span><span>Format</span><span>Availability</span></div>
       <div id="documentList" class="document-list" aria-live="polite"><p class="empty-docs">Loading catalogue…</p></div>
     </section>
 
@@ -68,6 +73,6 @@
     </section>
   </main>
   <footer><a class="brand" href="./">Rail Specifications Evidence Search</a><p>Independent project. Not affiliated with or endorsed by ERA, the European Union, UNISIG, ETSI or UIC.</p><a href="legal.html">Sources &amp; reuse</a></footer>
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

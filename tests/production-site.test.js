@@ -15,6 +15,8 @@ assert.deepEqual(evidencePages, ['evidence-subset-098.html'], 'only current-scop
 assert(!htmlFiles.some(file => file.startsWith('unisig-corpus-') || file.startsWith('subset-098-corpus')), 'machine corpora must not be public artifacts');
 const homepage = read('index.html');
 assert(homepage.includes('Rail Specifications Evidence Search') && homepage.includes('subset-098-rag.html') && homepage.includes('legal.html') && homepage.includes('rel="canonical"'));
+assert(homepage.includes('How to use this site.') && homepage.includes('homeQuestion'), 'homepage must provide a new-user path');
+assert(read('app.js').includes('Catalogue only') && read('app.js').includes('Search evidence'), 'catalogue must disclose per-document search availability');
 const assistant = read('subset-098-rag.html');
 assert(assistant.includes('aria-live="polite"') && read('subset-098-rag.js').includes('Copy citation') && assistant.includes('No institutional endorsement'));
 assert(read('subset-098-rag.js').includes('verifiedBundle'), 'verified clause bundles must not be truncated as ordinary context');

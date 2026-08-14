@@ -6,6 +6,7 @@
       "reference": "SUBSET-098",
       "version": "3.0.0",
       "publication": "limited-search-evidence",
+      "searchPage": "subset-098-rag.html",
       "source": "https://www.era.europa.eu/system/files/2023-01/sos3_index063_-_subset-098_v300.pdf",
       "note": "Current non-commercial prototype scope; written reuse clarification remains advisable."
     }
